@@ -3,9 +3,8 @@
 
 import React from 'react';
 import Radium from 'radium';
-import dellXps15 from '../../assets/img/dell-xps-15.png';
-import dellXps15Shadow from '../../assets/img/dell-xps-15-shadow.png';
+import Image from './Image';
 
 export default Radium(({shadow = false, ...props}: {}) => (
-  <img src={shadow ? dellXps15Shadow : dellXps15} {...props} style={{...props.style}}/>
+  <Image src={shadow ? "dell-xps-15-shadow.png" : "dell-xps-15.png"} {...props} style={{...props.style}}/>
 ));

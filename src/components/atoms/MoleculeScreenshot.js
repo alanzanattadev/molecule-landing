@@ -3,20 +3,17 @@
 
 import React from 'react';
 import Radium from 'radium';
-import moleculeScreenshotMain from '../../assets/img/molecule-screenshot-main.png';
-import moleculeTarget from '../../assets/img/molecule-target.gif';
-import moleculeDiagnostics from '../../assets/img/molecule-diagnostics.gif';
-import moleculeToolbox from '../../assets/img/molecule-toolbox.gif';
+import Image from './Image';
 
 function getImgOfType(type) {
   switch(type) {
-    case "toolbox": return moleculeToolbox;
-    case "target": return moleculeTarget;
-    case "diagnostics": return moleculeDiagnostics;
-    default: return moleculeScreenshotMain;
+    case "toolbox": return "molecule-toolbox.gif";
+    case "target": return "molecule-target.gif";
+    case "diagnostics": return "molecule-diagnostics.gif";
+    default: return "molecule-screenshot-main.png";
   }
 }
 
 export default Radium(({type, ...props}: {}) => (
-  <img src={getImgOfType(type)} {...props} style={{...props.style}}/>
+  <Image src={getImgOfType(type)} {...props} style={{...props.style}}/>
 ));

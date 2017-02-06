@@ -2,9 +2,9 @@
 // @flow
 
 import React from 'react';
+import Image from './Image';
 import Radium from 'radium';
-import moleculeMask from '../../assets/img/molecule-mask.svg';
 
 export default ({...props}: {}) => (
-  <img src={moleculeMask} {...props}/>
+  <Image src={"molecule-mask.svg"} {...props}/>
 );

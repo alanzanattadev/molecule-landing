@@ -126,6 +126,8 @@ class App extends Component {
               </CenterLayout>
               <Description centered>
                 We're a small team strongly active and we need you to give back freedom to makers.
+                We use Atom.io as a base for Molecule and we hope its community will enjoy what we do
+                to bring the most advanced IDE as an opened platform.
               </Description>
             </VerticalLayout>
           </CenterLayout>
