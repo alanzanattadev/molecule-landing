@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'Moon Bold';
+  src: url("/moon-bold.otf");
+}
+
+@font-face {
+  font-family: 'Moon Light';
+  src: url("/moon-light.otf");
+}
+
+@font-face {
+  font-family: 'Work Regular';
+  src: url("/work-sans-regular.ttf");
+}
+
+@font-face {
+  font-family: 'Work Light';
+  src: url("/work-sans-light.ttf");
+}
