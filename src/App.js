@@ -1,11 +1,9 @@
-'use babel'
+'use babel';
 // @flow
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import LandingHeader from './components/organisms/LandingHeader';
-import {ScrollableLayout, CenterLayout, VerticalLayout, EndLayout, RelativeLayout} from './components/nucleons/layouts';
+import {ScrollableLayout, CenterLayout, VerticalLayout} from './components/nucleons/layouts';
 import Step from './components/atoms/Step';
-import XPSIntegratedScreenshot from './components/atoms/XPSIntegratedScreenshot';
 import OnVisibleAnimation from './components/atoms/OnVisibleAnimation';
 import SubTitle from './components/atoms/SubTitle';
 import Footer from './components/atoms/Footer';

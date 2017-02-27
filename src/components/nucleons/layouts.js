@@ -1,6 +1,5 @@
-'use babel'
+'use babel';
 // @flow
-
 import React from 'react';
 import styled from 'styled-components';
 
@@ -44,7 +43,7 @@ export const RelativeLayout = styled(HorizontalLayout)`
   right: ${props => props.right};
   bottom: ${props => props.bottom};
   left: ${props => props.left};
-`
+`;
 
 export const AbsoluteLayout = styled(HorizontalLayout)`
   position: absolute;
@@ -63,7 +62,7 @@ export const FixedLayout = styled(HorizontalLayout)`
 `;
 
 export const OverlayLayout = styled(props => (
-  <FixedLayout top={"0px"} left={"0px"}>
+  <FixedLayout top={'0px'} left={'0px'}>
     <FullSizeLayout {...props}>
       {props.children}
     </FullSizeLayout>
@@ -137,4 +136,4 @@ export const ListLayout = ({
     ))}
     {items.length == 0 && mapPropsToEmptyComponent(props)}
   </ListContainer>
-)
+);

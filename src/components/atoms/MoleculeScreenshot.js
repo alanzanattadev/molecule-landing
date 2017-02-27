@@ -1,16 +1,15 @@
-'use babel'
+'use babel';
 // @flow
-
 import React from 'react';
 import Radium from 'radium';
 import Image from './Image';
 
 function getImgOfType(type) {
   switch(type) {
-    case "toolbox": return "molecule-toolbox.gif";
-    case "target": return "molecule-target.gif";
-    case "diagnostics": return "molecule-diagnostics.gif";
-    default: return "molecule-screenshot-main.png";
+  case 'toolbox': return 'molecule-toolbox.gif';
+  case 'target': return 'molecule-target.gif';
+  case 'diagnostics': return 'molecule-diagnostics.gif';
+  default: return 'molecule-screenshot-main.png';
   }
 }
 

@@ -1,6 +1,5 @@
-'use babel'
+'use babel';
 // @flow
-
 import React from 'react';
 import {withState} from 'recompose';
 

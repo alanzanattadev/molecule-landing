@@ -1,6 +1,5 @@
-'use babel'
+'use babel';
 // @flow
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {withState, lifecycle} from 'recompose';

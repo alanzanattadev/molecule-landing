@@ -1,6 +1,5 @@
-'use babel'
+'use babel';
 // @flow
-
 import React from 'react';
 import styled from 'styled-components';
 import {SecondaryRegularFont} from '../nucleons/texts';
@@ -17,4 +16,4 @@ export default styled.p`
   @media screen and (max-width: 800px) {
     max-width: 90vw;
   }
-`
+`;
