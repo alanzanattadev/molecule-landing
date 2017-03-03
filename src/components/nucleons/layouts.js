@@ -33,7 +33,6 @@ export const VerticalLayout = styled(BaseLayout)`
 `;
 
 export const FullSizeLayout = styled(HorizontalLayout)`
-  height: 100vh;
   width: 100%;
   width: 100vw;
 `;

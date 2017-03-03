@@ -51,7 +51,7 @@ class App extends Component {
             <CenterLayout stretched>
               <MoleculeScreenshot type="toolbox" style={{width: 'auto', height: 'auto', maxHeight: '70vh', maxWidth: '90vw'}}/>
             </CenterLayout>
-            <VerticalLayout margin="40px 20px 0px 20px">
+            <VerticalLayout margin="40px 20px">
               <CenterLayout>
                 <VerticalLayout>
                   <CenterLayout>
@@ -69,12 +69,12 @@ class App extends Component {
             </VerticalLayout>
           </OnVisibleAnimation>
         </Step>
-        <Step margin="200px 0px">
+        <Step>
           <OnVisibleAnimation>
             <CenterLayout stretched>
               <MoleculeScreenshot type="target" style={{width: 'auto', height: 'auto', maxHeight: '70vh', maxWidth: '90vw'}}/>
             </CenterLayout>
-            <VerticalLayout margin="40px 20px 0px 20px">
+            <VerticalLayout margin="40px 20px">
               <CenterLayout>
                 <VerticalLayout>
                   <CenterLayout>
@@ -92,12 +92,12 @@ class App extends Component {
             </VerticalLayout>
           </OnVisibleAnimation>
         </Step>
-        <Step margin="200px 0px 0px 0px">
+        <Step>
           <OnVisibleAnimation>
             <CenterLayout stretched>
               <MoleculeScreenshot type="diagnostics" style={{width: 'auto', height: 'auto', maxHeight: '70vh', maxWidth: '90vw'}}/>
             </CenterLayout>
-            <VerticalLayout margin="40px 20px 0px 20px">
+            <VerticalLayout margin="40px 20px">
               <CenterLayout>
                 <VerticalLayout>
                   <CenterLayout>

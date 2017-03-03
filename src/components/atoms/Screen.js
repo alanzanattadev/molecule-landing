@@ -6,7 +6,7 @@ import Radium from 'radium';
 import styled from 'styled-components';
 
 export default styled.section`
-  height: 100vh;
+  minHeight: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
