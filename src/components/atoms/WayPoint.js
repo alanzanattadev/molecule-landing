@@ -1,15 +1,11 @@
 'use babel';
 // @flow
-import React from 'react';
-import ReactDOM from 'react-dom';
+
 import {withState, lifecycle} from 'recompose';
 import _ from 'lodash';
 import refHandler from './RefHandler';
 
-export default Comp => refHandler
-(withState(
-  'visible', 'setVisible', false
-)(lifecycle({
+export default Comp => refHandler(withState('visible', 'setVisible', false)(lifecycle({
   componentDidMount() {
     this.handleScrollThrottled = _.throttle(() => this.handleScroll(), 10);
     document.addEventListener('scroll', this.handleScrollThrottled);
@@ -28,7 +24,7 @@ export default Comp => refHandler
 
   isVisible() {
     if (this.props.element) {
-      let elemRect = ReactDOM.findDOMNode(this.props.element).getBoundingClientRect();
+      let elemRect = this.props.element.node.getBoundingClientRect();
       let bodyRect = document.body.getBoundingClientRect();
       let offset = elemRect.top - bodyRect.top;
       let scrollY = window.scrollY;
