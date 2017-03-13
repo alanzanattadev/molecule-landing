@@ -1,10 +1,10 @@
-'use babel'
+'use babel';
 // @flow
 
 import React from 'react';
-import Image from './Image';
 import Radium from 'radium';
+import Image from './Image';
 
-export default ({...props}: {}) => (
-  <Image src={"molecule-mask.svg"} {...props}/>
-);
+export default Radium(({...props}: {}) => (
+  <Image src={'molecule-mask.svg'} {...props}/>
+));

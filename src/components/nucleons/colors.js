@@ -1,4 +1,4 @@
-'use babel'
+'use babel';
 // @flow
 
 export const DARK_GREY = '#404040';

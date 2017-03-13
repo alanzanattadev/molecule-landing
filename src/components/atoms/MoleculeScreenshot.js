@@ -1,4 +1,4 @@
-'use babel'
+'use babel';
 // @flow
 
 import React from 'react';
@@ -26,7 +26,7 @@ function getImgOfType(type) {
   }
 }
 
-export default Radium(function ({type, ...props}: {}) {
+export default Radium(function ({type, ...props}: {type: string}) {
   let gif = getGifOfType(type);
   let img = getImgOfType(type);
   if (gif != null)

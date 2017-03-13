@@ -1,12 +1,10 @@
-'use babel'
+'use babel';
 // @flow
-
 import React from 'react';
 import Radium from 'radium';
-import {LIGHT_GREY} from '../nucleons/colors';
 import MailChimpButton from '../atoms/MailChimpButton';
 
-export default Radium(({children}: {}) => (
+export default Radium(() => (
   <div style={{
     display: 'flex',
     position: 'fixed',

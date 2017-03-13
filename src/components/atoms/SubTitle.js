@@ -1,8 +1,6 @@
-'use babel'
+'use babel';
 // @flow
 
-import React from 'react';
-import Radium from 'radium';
 import styled from 'styled-components';
 import {PrimaryBoldFont} from '../nucleons/texts';
 import {DARK_GREY} from '../nucleons/colors';

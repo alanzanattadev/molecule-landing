@@ -1,16 +1,14 @@
-'use babel'
+'use babel';
 // @flow
-
 import React from 'react';
 import Radium from 'radium';
 import Header, {HeaderDeltaPart} from '../atoms/Header';
-import {StretchLayout, AbsoluteLayout, CenterLayout, EndLayout} from '../nucleons/layouts';
+import {StretchLayout, CenterLayout} from '../nucleons/layouts';
 import MoleculeScreenshot from '../atoms/MoleculeScreenshot';
 import {boxShadowActive} from '../nucleons/design';
 import HeaderTitle from '../atoms/HeaderTitle';
-import Logo from '../atoms/Logo';
 
-export default Radium(({}: {}) => (
+export default Radium(() => (
   <StretchLayout>
     <Header>
       <HeaderTitle>Create faster with Molecule</HeaderTitle>

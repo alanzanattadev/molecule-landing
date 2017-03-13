@@ -1,10 +1,10 @@
-'use babel'
+'use babel';
 // @flow
 
 import React from 'react';
 import Radium from 'radium';
 
-export default Radium(({}: {}) => (
+export default Radium(() => (
   <div style={{
     display: 'flex',
   }}>

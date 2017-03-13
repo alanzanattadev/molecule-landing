@@ -1,4 +1,4 @@
-'use babel'
+'use babel';
 // @flow
 
 import React from 'react';
@@ -6,7 +6,7 @@ import Radium from 'radium';
 import {MAGENTA, WHITE, PINK} from '../nucleons/colors';
 import {PrimaryBoldFont} from '../nucleons/texts';
 
-export default Radium(({}: {}) => (
+export default Radium(() => (
   <a href="http://eepurl.com/cACij9" target="_blank" style={{
     backgroundColor: MAGENTA,
     borderRadius: '5px',

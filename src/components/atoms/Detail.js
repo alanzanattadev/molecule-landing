@@ -1,9 +1,7 @@
-'use babel'
+'use babel';
 // @flow
 
-import React from 'react';
 import styled from 'styled-components';
-import {WHITE} from '../nucleons/colors';
 import {SecondaryLightFont} from '../nucleons/texts';
 
 export default styled.span`

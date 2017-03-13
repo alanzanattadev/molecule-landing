@@ -1,10 +1,8 @@
-'use babel'
+'use babel';
 // @flow
 
 import React from 'react';
-import Radium from 'radium';
 import styled from 'styled-components';
-import {lifecycle, withState} from 'recompose';
 import WayPoint from './WayPoint';
 
 const AnimationLayout = styled.div`
