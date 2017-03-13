@@ -1,6 +1,6 @@
 'use babel';
 // @flow
-import React from 'react';
+
 import styled from 'styled-components';
 import {PrimaryBoldFont} from '../nucleons/texts';
 import {DARK_GREY} from '../nucleons/colors';

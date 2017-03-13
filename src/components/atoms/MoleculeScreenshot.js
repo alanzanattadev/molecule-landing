@@ -1,5 +1,6 @@
 'use babel';
 // @flow
+
 import React from 'react';
 import Radium from 'radium';
 import Image from './Image';
@@ -13,6 +14,6 @@ function getImgOfType(type) {
   }
 }
 
-export default Radium(({type, ...props}: {}) => (
+export default Radium(({type, ...props}: {type: string}) => (
   <Image src={getImgOfType(type)} {...props} style={{...props.style}}/>
 ));

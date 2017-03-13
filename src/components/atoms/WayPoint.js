@@ -5,7 +5,7 @@ import {withState, lifecycle} from 'recompose';
 import _ from 'lodash';
 import refHandler from './RefHandler';
 
-export default Comp => refHandler(withState('visible', 'setVisible', false)(lifecycle({
+export default (Comp: React$Component<* ,* ,*>) => refHandler(withState('visible', 'setVisible', false)(lifecycle({
   componentDidMount() {
     this.handleScrollThrottled = _.throttle(() => this.handleScroll(), 10);
     document.addEventListener('scroll', this.handleScrollThrottled);
@@ -25,13 +25,11 @@ export default Comp => refHandler(withState('visible', 'setVisible', false)(life
   isVisible() {
     if (this.props.element) {
       let elemRect = this.props.element.node.getBoundingClientRect();
+      if (document.body === null) return false;
       let bodyRect = document.body.getBoundingClientRect();
       let offset = elemRect.top - bodyRect.top;
       let scrollY = window.scrollY;
-      if (scrollY > offset - 200)
-        return true;
-      else
-        return false;
+      return scrollY > offset - 200;
     } else {
       return false;
     }

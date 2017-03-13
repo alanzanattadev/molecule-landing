@@ -8,7 +8,7 @@ import MoleculeScreenshot from '../atoms/MoleculeScreenshot';
 import {boxShadowActive} from '../nucleons/design';
 import HeaderTitle from '../atoms/HeaderTitle';
 
-export default Radium(({}: {}) => (
+export default Radium(() => (
   <StretchLayout>
     <Header>
       <HeaderTitle>Create faster with Molecule</HeaderTitle>

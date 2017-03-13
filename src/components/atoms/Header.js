@@ -1,6 +1,6 @@
 'use babel';
 // @flow
-import React from 'react';
+
 import styled from 'styled-components';
 import {PRIMARY_DARK, PINK, WHITE} from '../nucleons/colors';
 

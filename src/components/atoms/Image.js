@@ -1,8 +1,9 @@
 'use babel';
 // @flow
+
 import React from 'react';
 import Radium from 'radium';
 
-export default Radium(({src, ...props}: {}) => (
+export default Radium(({src, ...props}: {src: string}) => (
   <img src={`https://s3.eu-central-1.amazonaws.com/moleculeide/static/assets/img/${src}`} {...props}/>
 ));
