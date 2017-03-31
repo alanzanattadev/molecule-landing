@@ -10,6 +10,7 @@ export default Radium(() => (
     display: 'flex',
     position: 'fixed',
     bottom: '0',
+    paddingBottom: '10px',
     left: '0',
     width: '100%',
     height: '60px',

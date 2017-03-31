@@ -17,5 +17,6 @@ export default styled.h1`
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 37px;
+    margin: 50px 15px 50px 15px;
   }
 `;
