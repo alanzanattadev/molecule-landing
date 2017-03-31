@@ -3,6 +3,7 @@
 import React from 'react';
 import Radium from 'radium';
 import MailChimpButton from '../atoms/MailChimpButton';
+import DownloadButton from '../atoms/DownloadButton';
 
 export default Radium(() => (
   <div style={{
@@ -17,5 +18,6 @@ export default Radium(() => (
     zIndex: '10',
   }}>
     <MailChimpButton/>
+    <DownloadButton/>
   </div>
 ));

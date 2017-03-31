@@ -15,12 +15,17 @@ import Mask from './components/atoms/Mask';
 import MoleculeScreenshot from './components/atoms/MoleculeScreenshot';
 import Link from './components/atoms/Link';
 import NewsLetterBar from './components/organisms/NewsLetterBar';
+import Smooch from 'smooch';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    Smooch.init({ appToken: '48dllw59ia1vrotft27sb231o' });
+  }
+
   render() {
     return (
-      <ScrollableLayout>
+      <VerticalLayout>
         <NewsLetterBar/>
         <LandingHeader/>
         <Screen>
@@ -47,7 +52,6 @@ class App extends Component {
         <Step>
           <OnVisibleAnimation>
             <CenterLayout stretched>
-              <MoleculeScreenshot type="toolbox" style={{width: 'auto', height: 'auto', maxHeight: '70vh', maxWidth: '90vw'}}/>
             </CenterLayout>
             <VerticalLayout margin="40px 20px">
               <CenterLayout>
@@ -70,7 +74,6 @@ class App extends Component {
         <Step>
           <OnVisibleAnimation>
             <CenterLayout stretched>
-              <MoleculeScreenshot type="target" style={{width: 'auto', height: 'auto', maxHeight: '70vh', maxWidth: '90vw'}}/>
             </CenterLayout>
             <VerticalLayout margin="40px 20px">
               <CenterLayout>
@@ -93,7 +96,6 @@ class App extends Component {
         <Step>
           <OnVisibleAnimation>
             <CenterLayout stretched>
-              <MoleculeScreenshot type="diagnostics" style={{width: 'auto', height: 'auto', maxHeight: '70vh', maxWidth: '90vw'}}/>
             </CenterLayout>
             <VerticalLayout margin="40px 20px">
               <CenterLayout>
@@ -140,7 +142,7 @@ class App extends Component {
             <Detail>An Epitech Innovative Project</Detail>
           </CenterLayout>
         </Footer>
-      </ScrollableLayout>
+      </VerticalLayout>
     );
   }
 }

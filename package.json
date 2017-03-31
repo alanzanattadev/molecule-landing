@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "polished": "^1.0.1",
     "radium": "^0.18.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-gif-player": "^0.2.2",
     "recompose": "^0.22.0",
+    "smooch": "^3.14.0",
     "styled-components": "^1.4.2"
   },
   "scripts": {

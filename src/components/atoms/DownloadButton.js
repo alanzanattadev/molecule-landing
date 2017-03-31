@@ -7,7 +7,7 @@ import {MAGENTA, WHITE, PINK} from '../nucleons/colors';
 import {PrimaryBoldFont} from '../nucleons/texts';
 
 export default Radium(() => (
-  <a href="http://eepurl.com/cACij9" target="_blank" style={{
+  <a href="https://github.com/alanzanattadev/atom-molecule-dev-environment" target="_blank" style={{
     backgroundColor: MAGENTA,
     borderRadius: '5px',
     padding: '10px 20px',
@@ -20,6 +20,6 @@ export default Radium(() => (
       backgroundColor: PINK
     }
   }}>
-    Stay tuned
+    Get Molecule
   </a>
 ));

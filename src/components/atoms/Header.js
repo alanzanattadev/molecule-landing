@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import {PRIMARY_DARK, PINK, WHITE} from '../nucleons/colors';
 
 export default styled.header`
-  height: 93vh;
   background: linear-gradient(-59deg, ${PINK}, ${PRIMARY_DARK});
   overflow: hidden;
   position: relative;
