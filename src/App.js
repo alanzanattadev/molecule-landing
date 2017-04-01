@@ -15,6 +15,8 @@ import Mask from './components/atoms/Mask';
 import MoleculeScreenshot from './components/atoms/MoleculeScreenshot';
 import Link from './components/atoms/Link';
 import NewsLetterBar from './components/organisms/NewsLetterBar';
+import TwitterTimeline from './components/atoms/TwitterTimeline';
+import TwitterFollow from './components/atoms/TwitterFollow';
 import Smooch from 'smooch';
 import './App.css';
 
@@ -28,7 +30,7 @@ class App extends Component {
       <VerticalLayout>
         <NewsLetterBar/>
         <LandingHeader/>
-        <Screen>
+        {/* <Screen>
           <OnVisibleAnimation>
             <CenterLayout stretched>
               <VerticalLayout>
@@ -114,15 +116,24 @@ class App extends Component {
               </CenterLayout>
             </VerticalLayout>
           </OnVisibleAnimation>
-        </Step>
-        <Screen>
+        </Step> */}
+        <CenterLayout>
+          <SubTitle>Follow us</SubTitle>
+        </CenterLayout>
+        <CenterLayout>
+          <TwitterFollow/>
+        </CenterLayout>
+        <CenterLayout stretched>
+          <TwitterTimeline/>
+        </CenterLayout>
+        <Screen margin="20px 0px">
           <CenterLayout stretched>
             <VerticalLayout>
-              <CenterLayout margin="30px">
-                <Mask height="200px" width="200px"/>
-              </CenterLayout>
               <CenterLayout>
                 <SubTitle centered>Contribute</SubTitle>
+              </CenterLayout>
+              <CenterLayout margin="30px">
+                <Mask height="200px" width="200px"/>
               </CenterLayout>
               <Description centered>
                 We're a small team strongly active and we need you to give back freedom to makers.
