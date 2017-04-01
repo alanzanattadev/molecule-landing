@@ -30,28 +30,7 @@ class App extends Component {
       <VerticalLayout>
         <NewsLetterBar/>
         <LandingHeader/>
-        {/* <Screen>
-          <OnVisibleAnimation>
-            <CenterLayout stretched>
-              <VerticalLayout>
-                <SubTitle>We have a vision</SubTitle>
-                <Description>
-                  At Molecule we think that you shouldn't have to adapt your workflow to your IDE but
-                  the IDE to your methods, whether you're using cutting edge tooling or advanced workflows,
-                  we provide you a flexible and easy to use tool that will become your artboard.
-                </Description>
-                <Description>
-                  Open Source is at the core of our thinking and we want to listen and help our community
-                  to create the best and most modern development platform for your last innovations.
-                </Description>
-                <CenterLayout margin="50px 50px">
-                  <Logo height="200px" width="200px"/>
-                </CenterLayout>
-              </VerticalLayout>
-            </CenterLayout>
-          </OnVisibleAnimation>
-        </Screen>
-        <Step>
+        {/* <Step>
           <OnVisibleAnimation>
             <CenterLayout stretched>
             </CenterLayout>
@@ -130,6 +109,21 @@ class App extends Component {
           <CenterLayout stretched>
             <VerticalLayout>
               <CenterLayout>
+                <SubTitle centered>We need feedback</SubTitle>
+              </CenterLayout>
+              <Description centered>
+                Molecule is in early development stage, and we need to
+                ensure our users like our vision of what an IDE should be.
+                We love hearing your feedbacks so don't hesitate to talk to us,
+                we're opened to every ideas and issues you have.
+              </Description>
+            </VerticalLayout>
+          </CenterLayout>
+        </Screen>
+        <Screen margin="20px 0px">
+          <CenterLayout stretched>
+            <VerticalLayout>
+              <CenterLayout>
                 <SubTitle centered>Contribute</SubTitle>
               </CenterLayout>
               <CenterLayout margin="30px">
@@ -138,8 +132,29 @@ class App extends Component {
               <Description centered>
                 We're a small team strongly active and we need you to give back freedom to makers.
                 We use Atom.io as a base for Molecule and we hope its community will enjoy what we do
-                to bring the most advanced IDE as an opened platform.
+                to bring the most advanced IDE as an opened platform. We are opened.
               </Description>
+            </VerticalLayout>
+          </CenterLayout>
+        </Screen>
+        <Screen>
+          <CenterLayout stretched>
+            <VerticalLayout>
+              <CenterLayout>
+                <SubTitle>Our vision</SubTitle>
+              </CenterLayout>
+              <Description>
+                At Molecule we think that you shouldn't have to adapt your workflow to your IDE but
+                the IDE to your methods, whether you're using cutting edge tooling or advanced workflows,
+                we provide you a flexible and easy to use tool that will become your artboard.
+              </Description>
+              <Description>
+                Open Source is at the core of our thinking and we want to listen and help our community
+                to create the best and most modern development platform for your last innovations.
+              </Description>
+              <CenterLayout margin="50px 50px">
+                <Logo height="200px" width="200px"/>
+              </CenterLayout>
             </VerticalLayout>
           </CenterLayout>
         </Screen>
