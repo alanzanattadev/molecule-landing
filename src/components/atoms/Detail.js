@@ -8,6 +8,6 @@ export default styled.span`
   color: WHITE;
   font-size: 16px;
   font-family: ${SecondaryLightFont};
-  margin: 10px 5px;
+  margin: 10px 20px;
   max-width: 100vw;
 `;

@@ -23,3 +23,18 @@ body {
   font-family: 'Work Light';
   src: url("/work-sans-light.ttf");
 }
+
+@font-face {
+  font-family: 'Jaapokki Enchance Regular';
+  src: url("/jaapokki-enchance-regular.otf");
+}
+
+@font-face {
+  font-family: 'Jaapokki Regular';
+  src: url("/jaapokki-regular.otf");
+}
+
+@font-face {
+  font-family: 'Jaapokki Subtract Regular';
+  src: url("/jaapokki-subtract-regular.otf");
+}

@@ -23,7 +23,7 @@ export default (Comp: React$Component<* ,* ,*>) => refHandler(withState('visible
   },
 
   isVisible() {
-    if (this.props.element) {
+    if (this.props.element && this.props.element.node) {
       let elemRect = this.props.element.node.getBoundingClientRect();
       if (document.body === null) return false;
       let bodyRect = document.body.getBoundingClientRect();
