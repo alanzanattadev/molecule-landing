@@ -112,6 +112,9 @@ class App extends Component {
             "Easy access to your toolbox in a dock panel",
             "Everything a click away",
           ]}
+          images={[
+            "molecule-dock.png",
+          ]}
         />
         <ExplainedFeature
           title="Unified Execution"
@@ -123,17 +126,25 @@ class App extends Component {
             "Beautiful and ergonomic UI",
             "Real time visual notifications of important events",
           ]}
+          images={[
+            "molecule-plans.png",
+            "molecule-planconfig.png"
+          ]}
         />
         <ExplainedFeature
           title="Clear Information Flow"
           description="Molecule aspires to be revolutionary in terms of information readability, we wish to offer you a clear
   and simple way of navigating through your tools' logs. Diagnostic is the name we gave to a log entity,
   a diagnostic can be 1 error for a tool and a group of 5 warnings for some other tool. The point is no matter the tool,
-  a diagnostic is easy to read for a better understanding of the problem and so can lead to an easy fix."
+  a diagnostic is easy to read for a better understanding of the problem and can lead to an easy fix."
           features={[
             "New way of reading information through Molecule's diagnostics",
             "Organized / Logs mode",
             "Automatic sorting of output",
+          ]}
+          images={[
+            "molecule-diagnostics-summaries.png",
+            "molecule-diagnostics-panel.png",
           ]}
         />
         <CenterLayout>
