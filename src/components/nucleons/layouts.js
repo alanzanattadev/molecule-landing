@@ -54,6 +54,7 @@ export const StretchLayout = styled(VerticalLayout)`
 export const CenterLayout = styled(HorizontalLayout)`
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const ScrollableLayout = styled(StretchLayout)`
