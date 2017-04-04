@@ -103,6 +103,20 @@ class App extends Component {
           </OnVisibleAnimation>
         </Step> */}
         <ExplainedFeature
+          title="An Atom plugin"
+          description=""
+          features={[
+            "Provides extensibility",
+            "Keep the editor you already love",
+            "Active community",
+          ]}
+          images={[
+            "atom-logo-256.png",
+          ]}
+          imageHero
+          imageStyle={{height: '124px', width: '124px'}}
+        />
+        <ExplainedFeature
           title="Centralized Toolbox"
           description="As developers thriving for efficiency during labor, we all ended up in a situation where
   every time you want to work, you have to start a numerous amount of tools in X terminals spread over Y work-spaces.
@@ -145,6 +159,29 @@ class App extends Component {
           images={[
             "molecule-diagnostics-summaries.png",
             "molecule-diagnostics-panel.png",
+          ]}
+        />
+        <ExplainedFeature
+          title="A first tool set for web developers"
+          images={[
+            "gulp-logo.svg",
+            "webpack-logo.svg",
+            "npm-logo.png",
+            "chrome-logo.png",
+            "eslint-logo.png",
+            "flow-logo.png",
+            "testcafe-logo.png",
+            "jest-logo.png",
+            "nightwatch-logo.png",
+            "terminal-logo.png"
+          ]}
+          imageStyle={{height: '45px', width: '45px'}}
+          imageHero
+          description="We provide you a first tool set for web development, but Molecule will target way more stacks ! We'll support mobile, devops and back-end development in the future too ! We're also making the plugin system flexible to let you integrate your own tools, whether they're propriotary or not. Keep in mind current integrations are partials, it will evolve."
+          features={[
+            "Web development pack included",
+            "10 famous tools partially integrated",
+            "Way more soon !"
           ]}
         />
         <CenterLayout>
