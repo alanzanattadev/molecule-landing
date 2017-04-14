@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "babel-eslint": "^7.1.1",
     "eslint": "^3.16.1",
     "eslint-plugin-react": "^6.10.0",
@@ -11,6 +12,7 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "lodash": "^4.17.4",
     "polished": "^1.0.1",
     "radium": "^0.18.1",
@@ -18,7 +20,7 @@
     "react-dom": "^15.4.2",
     "react-gif-player": "^0.2.2",
     "recompose": "^0.22.0",
-    "rss-to-json": "^1.0.2",
+    "rss-parser": "^2.6.1",
     "smooch": "^3.14.0",
     "styled-components": "^1.4.2"
   },
@@ -26,6 +28,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   }
 }

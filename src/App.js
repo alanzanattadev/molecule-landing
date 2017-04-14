@@ -102,6 +102,10 @@ class App extends Component {
             </VerticalLayout>
           </OnVisibleAnimation>
         </Step> */}
+        <CenterLayout>
+          <SubTitle>Blog</SubTitle>
+        </CenterLayout>
+        <MediumFeed name="alanzanattadev"/>
         <ExplainedFeature
           title="An Atom plugin"
           description=""

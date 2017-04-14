@@ -11,13 +11,19 @@ export default MediumFeedConnecter()(
     <ul
       style={{
         display: "flex",
-        flexWrap: "wrap",
+        flexDirection: 'column',
+        alignItems: "center",
+        padding: '0',
+        margin: '0',
       }}
     >
       {articles.map(article => (
-        <li key={article}>
-          <MediumArticle />
-        </li>
+        <MediumArticle
+          key={article.guid}
+          title={article.title}
+          link={article.guid}
+          // description={article["content:encoded"].substring(0, 100)}
+        />
       ))}
     </ul>
   )),

@@ -17,7 +17,10 @@ export const BaseLayout = styled.div`
   width: ${props => props.width};
   min-height: ${props => props.minHeight};
   min-width: ${props => props.minWidth};
+  max-height: ${props => props.maxHeight};
+  max-width: ${props => props.maxWidth};
   background-color: ${props => props.backgroundColor};
+  cursor: ${props => props.onClick ? 'pointer' : 'default'};
 `;
 
 export const HorizontalLayout = styled(BaseLayout)`
