@@ -6,6 +6,7 @@ import {
   ScrollableLayout,
   CenterLayout,
   VerticalLayout,
+  StretchLayout,
 } from "./components/nucleons/layouts";
 import Step from "./components/atoms/Step";
 import OnVisibleAnimation from "./components/atoms/OnVisibleAnimation";
@@ -24,6 +25,7 @@ import TwitterFollow from "./components/atoms/TwitterFollow";
 import Smooch from "smooch";
 import MediumFeed from "./components/ecosystems/MediumFeed";
 import ExplainedFeature from "./components/organisms/ExplainedFeature";
+import ChangelogFeed from './components/ecosystems/ChangelogFeed';
 import "./App.css";
 
 class App extends Component {
@@ -103,9 +105,21 @@ class App extends Component {
           </OnVisibleAnimation>
         </Step> */}
         <CenterLayout>
-          <SubTitle>Blog</SubTitle>
+          <StretchLayout margin="20" minWidth="250px">
+            <CenterLayout>
+              <SubTitle>Blog</SubTitle>
+            </CenterLayout>
+            <MediumFeed name="alanzanattadev"/>
+          </StretchLayout>
+          <StretchLayout margin="20" minWidth="250px">
+            <CenterLayout>
+              <SubTitle>Changelogs</SubTitle>
+            </CenterLayout>
+            <CenterLayout>
+              <ChangelogFeed/>
+            </CenterLayout>
+          </StretchLayout>
         </CenterLayout>
-        <MediumFeed name="alanzanattadev"/>
         <ExplainedFeature
           title="An Atom plugin"
           description=""
