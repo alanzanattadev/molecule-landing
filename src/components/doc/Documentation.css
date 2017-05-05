@@ -1,0 +1,13 @@
+.leftMenu{
+  float:left;
+  width: 20%;
+  background-color: #4099FF;
+  margin: 3%;
+}
+
+.docContent{
+  width: 68%;
+  float: right;
+  background-color: #CCC;
+  margin: 3%;
+}
