@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Router from './Router'
 import { StyleRoot } from 'radium';
 import './index.css';
 
 ReactDOM.render(
   <StyleRoot>
-    <App />
+    <Router />
   </StyleRoot>,
   document.getElementById('root')
 );
