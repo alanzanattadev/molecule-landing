@@ -21,7 +21,7 @@ export default function MediumConnecterFactory() {
           throw new Error("You must set a user name to fetch Medium articles");
         axios
           .get(
-            `https://cors.now.sh/https://medium.com/feed/@${this.props.name}`,
+            `https://cors-buster.now.sh/?href=https://medium.com/feed/@${this.props.name}`,
           )
           .then(response => {
             return new Promise((resolve, reject) =>
