@@ -9,11 +9,12 @@ import element1 from "./../../../../public/documentMarkdown/Element1.md";
 import element2 from "./../../../../public/documentMarkdown/Element2.md";
 
 class DocumentationBlock extends Component {
+  //Regarder react-router-dom avec des params
   render() {
     return (
       <Switch>
-        <Route exact path="/document" component={Elem1} />
-        <Route exact path="/document/elem2" component={Elem2} />
+        <Route exact path="/document/1" component={Elem1} />
+        <Route exact path="/document/2" component={Elem2} />
       </Switch>
     );
   }

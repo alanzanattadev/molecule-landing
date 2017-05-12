@@ -9,6 +9,7 @@ const AppRouter = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/document" component={Documentation} />
+        <Route component={() => <div>not found</div>}/>
       </Switch>
     </div>
   </Router>
