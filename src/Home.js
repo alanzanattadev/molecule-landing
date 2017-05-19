@@ -26,9 +26,9 @@ import Smooch from "smooch";
 import MediumFeed from "./components/ecosystems/MediumFeed";
 import ExplainedFeature from "./components/organisms/ExplainedFeature";
 import ChangelogFeed from './components/ecosystems/ChangelogFeed';
-import "./App.css";
+import "./Home.css";
 
-class App extends Component {
+class Home extends Component {
   componentDidMount() {
     Smooch.init({ appToken: "48dllw59ia1vrotft27sb231o" });
   }
@@ -290,4 +290,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
