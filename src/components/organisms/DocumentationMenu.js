@@ -1,7 +1,7 @@
 "use babel";
 // @flow
 import React, { Component } from "react";
-import { CenterLayout } from "./../../nucleons/layouts";
+import { CenterLayout } from "./../nucleons/layouts";
 import DocumentationMenuElement from "./../molecules/DocumentationMenuElement"
 
 const createMenuElements =  function(jsonElements){
