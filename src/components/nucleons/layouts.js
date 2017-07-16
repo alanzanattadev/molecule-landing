@@ -3,12 +3,14 @@
 
 import styled from 'styled-components';
 
+// z-index: ${props => props.zIndex || '0'};
+
 export const BaseLayout = styled.div`
   display: flex;
   flex-shrink: 0;
   margin: ${props => props.margin || '0'};
   padding: ${props => props.padding || '0'};
-  z-index: ${props => props.zIndex || '0'};
+
   overflow: ${props => props.overflow || 'hidden'};
   box-shadow: ${props => props.boxShadow || 'none'};
   border: ${props => props.border || '0px'};

@@ -5,25 +5,37 @@ import React from "react";
 import Radium from "radium";
 import MoleculeLogoName from "./MoleculeLogoName";
 import Logo from "./Logo";
+import { PRIMARY_DARK } from '../nucleons/colors';
+import MoleculeScreenshot from "../atoms/MoleculeScreenshot";
+import { boxShadowActive } from "../nucleons/design";
+import NavBarButton from "./NavBarButton";
+import Bar from "./Bar";
 
 export default Radium(({}) => (
-  <div
-    style={{
-      display: "flex",
-      height: "60px",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "white",
-    }}
-  >
+  <Bar>
     <Logo
       style={{
         height: "40px",
         width: "40px",
         marginRight: "10px",
-        marginTop: "5px",
+        marginTop: "10px",
+        marginLeft: "100px",
+        alignItems: "center",
+        display: "flex"
       }}
     />
     <MoleculeLogoName />
-  </div>
+    <NavBarButton>
+      Documentation
+    </NavBarButton>
+    <NavBarButton>
+      Blog
+    </NavBarButton>
+    <NavBarButton>
+      GitHub
+    </NavBarButton>
+    <NavBarButton>
+      Contact Us
+    </NavBarButton>
+  </Bar>
 ));
