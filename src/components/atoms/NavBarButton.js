@@ -6,6 +6,7 @@ import { PRIMARY_DARK } from "../nucleons/colors";
 import { LogoFont } from "../nucleons/texts";
 
 export default styled.button`
+  font-style: ${LogoFont};
   font-size: 16px;
   border: none;
   color: ${PRIMARY_DARK};
