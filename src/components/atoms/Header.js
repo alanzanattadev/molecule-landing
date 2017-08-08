@@ -2,7 +2,9 @@
 // @flow
 
 import styled from 'styled-components';
-import {PRIMARY_DARK, PINK, WHITE} from '../nucleons/colors';
+import {PRIMARY_DARK, PINK, WHITE, LIGHT_GREY, DARK_GREY} from '../nucleons/colors';
+
+// background: linear-gradient(-59deg, ${LIGHT_GREY}, ${DARK_GREY});
 
 export default styled.header`
   background: linear-gradient(-59deg, ${PINK}, ${PRIMARY_DARK});
@@ -11,8 +13,6 @@ export default styled.header`
   &:before {
     height: 45vh;
     width: 130vw;
-    border-bottom: solid 30vh ${WHITE};
-    border-radius: 0% 0% 100% 100%;
     margin-top: -50px;
     position: absolute;
     background-color: transparent;

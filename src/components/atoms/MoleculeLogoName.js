@@ -10,11 +10,13 @@ export default Radium(({}) => (
   <span
     style={{
       fontFamily: LogoFont,
-      fontSize: "40px",
+      fontSize: "35px",
       color: PRIMARY_DARK,
       alignItems: "center",
       display: "flex",
       marginTop: '10px',
+      marginRight: '15px',
+      textAlign: "center",
     }}
   >
     Molecule

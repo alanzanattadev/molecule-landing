@@ -14,7 +14,7 @@ export default Radium(() => (
     <Header>
       <NavBar />
       <HeaderTitle>
-        Centralize your tooling and focus on what matters
+        Centralize your tooling & focus on what matters
       </HeaderTitle>
       <CenterLayout stretched>
         <MoleculeScreenshot
