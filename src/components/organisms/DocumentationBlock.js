@@ -4,8 +4,7 @@
 import React, { Component } from "react";
 import Markdown from "react-markdown";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import docJson from "./../../../public/docElement.json"
-
+import docJson from "./../../../public/docElement.json";
 
 const loadMarkdownFile = function(jsonElements, idMarkdown) {
   let pathMarkdown = jsonElements.find(
@@ -20,17 +19,20 @@ const loadMarkdownFile = function(jsonElements, idMarkdown) {
 };
 
 class DocumentationBlock extends Component {
-
   state = {};
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    loadMarkdownFile(docJson, id).then(mdContent => this.setState({mdContent: mdContent}))
+    loadMarkdownFile(docJson, id).then(mdContent =>
+      this.setState({ mdContent: mdContent })
+    );
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     const id = nextProps.match.params.id;
-    loadMarkdownFile(docJson, id).then(mdContent => this.setState({mdContent: mdContent}))
+    loadMarkdownFile(docJson, id).then(mdContent =>
+      this.setState({ mdContent: mdContent })
+    );
   }
 
   render() {
@@ -39,11 +41,7 @@ class DocumentationBlock extends Component {
       return null;
     }
 
-    return (
-      <Markdown
-        source={mdContent}
-      />
-    );
+    return <Markdown source={mdContent} />;
   }
 }
 

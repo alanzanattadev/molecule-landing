@@ -3,7 +3,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 class DocumentationMenuElement extends Component {
   render() {
     return (
