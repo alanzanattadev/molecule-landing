@@ -1,0 +1,9 @@
+{
+  "docs": {
+    "API": [
+      "taskAPI",
+      "helperAPI"
+    ],
+    "Plugin": ["pluginCreator"]
+  }
+}
