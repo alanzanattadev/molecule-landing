@@ -1,0 +1,17 @@
+{
+  "docs": {
+    "Getting Started": [
+      "installation",
+      "createplan",
+      "usingplan",
+      "defaultplugins"
+    ],
+    "Create a Plugin": [
+      "createPlugin",
+      "configSchemaRef",
+      "helperAPI",
+      "taskAPI"
+    ],
+    "Developper documentation": ["questionsystem"]
+  }
+}
