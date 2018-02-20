@@ -1,9 +1,17 @@
 {
   "docs": {
-    "API": [
-      "taskAPI",
-      "helperAPI"
+    "Getting Started": [
+      "installation",
+      "createplan",
+      "usingplan",
+      "defaultplugins"
     ],
-    "Plugin": ["pluginCreator"]
+    "Create a Plugin": [
+      "createPlugin",
+      "configSchemaRef",
+      "helperAPI",
+      "taskAPI"
+    ],
+    "Developper documentation": ["questionsystem"]
   }
 }

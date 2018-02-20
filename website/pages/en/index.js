@@ -79,9 +79,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Example Link</Button>
-            <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
+            <Button href={docUrl('installation.html', language)}>Get Started</Button>
           </PromoSection>
           <img src={imgUrl('molecule-screenshot-main.png')} />
         </div>

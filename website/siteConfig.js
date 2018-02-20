@@ -19,13 +19,12 @@ const siteConfig = {
   title: 'Molecule' /* title for your website */,
   tagline: 'Centralize your tooling and focus on what matters',
   url: 'https://www.molecule.sh' /* your website url */,
-  baseUrl: '/molecule/' /* base url for your project */,
+  baseUrl: '/' /* base url for your project */,
   projectName: 'Molecule Project',
   headerLinks: [
-    {doc: 'pluginCreator', label: 'Docs'},
-    {doc: 'taskAPI', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'installation', label: 'Getting Started'},
+    {blog: false, label: "Blog"},
+    {label: "Github", href: "https://github.com/alanzanattadev/atom-molecule-dev-environment"},
   ],
   users,
   /* path to images for header/footer */

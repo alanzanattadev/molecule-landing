@@ -34,22 +34,12 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
-            </a>
-            <a href={this.docUrl(' .html', this.props.language)}>
-              Guides (or other categories)
-            </a>
-            <a href={this.docUrl('taskAPI.html', this.props.language)}>
-              API Reference (or other categories)
-            </a>
+          <h5>Follow us !</h5>
+          <a href="https://twitter.com/moleculeide" target="_blank">
+            Twitter
+          </a>
           </div>
           <div>
-            <h5>Follow us !</h5>
-            <a href="https://twitter.com/moleculeide" target="_blank">
-              Twitter
-            </a>
             <a href="https://github.com/">
               Github
             </a>
