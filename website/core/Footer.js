@@ -40,7 +40,7 @@ class Footer extends React.Component {
           </a>
           </div>
           <div>
-            <a href="https://github.com/">
+            <a href="https://github.com/alanzanattadev/atom-molecule-dev-environment/">
               Github
             </a>
             <a
@@ -54,9 +54,17 @@ class Footer extends React.Component {
               Star
             </a>
           </div>
+          <a href="http://www.epitech.eu/epitech-innovative-projects.aspx">
+            <img
+              src={this.props.config.baseUrl + this.props.config.eipIcon}
+              alt="An Epitech Innovative Project"
+              width="117"
+              height="60"
+            />
+          </a>
         </section>
         <section className="copyright">
-        An Epitech Innovative Project
+          {this.props.config.copyright}
         </section>
       </footer>
     );

@@ -30,6 +30,7 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/molecule.png',
   footerIcon: 'img/molecule.png',
+  eipIcon: 'img/logo-eip.png',
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
@@ -40,7 +41,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Moleculeide',
+    'molecule-ide',
   // organizationName: 'deltice', // or set an env variable ORGANIZATION_NAME
   // projectName: 'test-site', // or set an env variable PROJECT_NAME
   highlight: {
