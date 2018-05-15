@@ -4,7 +4,7 @@ title: Using a plan
 
 When starting Atom, your screen should look somewhat like this:
 
-![Starting screen. Notice the panel at the bottom](resources/molecule-start.png)
+![Starting screen. Notice the panel at the bottom](assets/molecule-start.png)
 
 *Note: for the sake of this tutorial, we are browsing [the Molecule repository](https://github.com/alanzanattadev/atom-molecule-dev-environment/)*
 
@@ -38,17 +38,17 @@ and an option to [create a new plan](creating-a-plan.md).
 
 Each plan is displayed with two buttons:
 
-- A "Pin" button, that adds the plan to a list of "pinned" plans displayed above
+- A **Pin** button, that adds the plan to a list of "pinned" plans displayed above
 the Control Panel.
 
-- A "Play" button that runs/stops the execution of the plan.
+- A **Play** button that runs/stops the execution of the plan.
 
-![Plugin subpanel](resources/plugin-subpanel.png)
+![Plugin subpanel](assets/plugin-subpanel.png)
 
-Click the "Play" button next to the npm plan "eslint". Two additional buttons
+Click the Play button next to the npm plan "eslint". Two additional buttons
 should appear under that plan:
 
-![Eslint plan buttons](resources/eslint-plan-buttons.png)
+![Eslint plan buttons](assets/eslint-plan-buttons.png)
 
 - The Diagnostics button opens the [Diagnostics Subpanel](#diagnostics-subpanel).
 
@@ -74,7 +74,7 @@ All Molecule plugins have the same workflow:
 These messages are called **Diagnostics**, and can be accessed in the
 **Diagnostics Subpanel**.
 
-![The Diagnostics Subpanel](resources/diagnostics-closeup.png)
+![The Diagnostics Subpanel](assets/diagnostics-closeup.png)
 
 Once you've executed a plan, the Diagnostics Subpanel will start to
 fill. There are several types of diagnostics, with different colors:
@@ -100,10 +100,10 @@ is based on the `eslint` CLI.
 
 While plugins try to parse the text these CLIs output into more readable
 diagnostics, sometimes you may want to read the text output directly. You can
-switch to the Terminal Panel by clicking on the "Terminal" button under the
+switch to the **Terminal Panel** by clicking on the **Terminal** button under the
 concerned plan.
 
-![The Terminal Panel](resources/terminal-closeup.png)
+![The Terminal Panel](assets/terminal-closeup.png)
 
 Some plugins may ask you to enter text into the Terminal Panel (ex: a password).
 However, in most cases, interacting with the Terminal is impossible.

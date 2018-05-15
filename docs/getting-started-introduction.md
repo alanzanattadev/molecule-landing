@@ -59,7 +59,7 @@ Installation
 
     Molecule should then be installed the next time you start Atom.
 
-![Your screen shoud look roughly like this](resources/molecule-start.png)
+![Your screen shoud look roughly like this](assets/molecule-start.png)
 
 ### Update
 

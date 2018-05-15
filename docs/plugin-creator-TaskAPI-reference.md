@@ -2,34 +2,34 @@
 title: TaskAPI Reference
 ---
 
-The **TaskAPI** provides methods allowing to interact with the diagnostics messages, and the activity of the used tools.
+The **TaskAPI** class provides methods allowing to interact with the diagnostics messages, and the activity of the used tools.
 
 ## Diagnostics
 
-The diagnostic field has three methods allowing to set the environment for the diagnostics.
+The **TaskAPI.diagnostic** field has three methods allowing to set the environment for the diagnostics.
 
 ### Methods
 
-* **setForPath(PublishDiagnostics: PublishDiagnosticsParams)** return a void, assigns diagnostics to a given path.
-* **setForWorkspace(PublishDiagnostics: PublishDiagnosticsParams)** return a void, sets the path of a project.
-* **clearAll()** return a void, clear the diagnostic configuration.
+* **setForPath(publishDiagnostics: PublishDiagnosticsParams)**: assigns diagnostics to a given path.
+* **setForWorkspace(publishDiagnostics: PublishDiagnosticsParams)**: sets the path of a project.
+* **clearAll()**: clear the diagnostic configuration.
+
+**PublishDiagnosticsParams** is an object type [defined in the LSP specification](https://microsoft.github.io/language-server-protocol/specification#textDocument_publishDiagnostics).
 
 ## BusyState
 
-The busyState field allows to notify if a tool is running or not.
-
-There is two modes, the busy and waiting mode.
+The **TaskAPI.busyState** field allows your tool to tell Molecule whether it's currently working or waiting (usually, waiting for a file to be changed).
 
 ### Methods
 
-* **switchToBusyMode()** return a void, notify that the tool is working.
-* **switchToWaitingMode()** return a void, notify that the tool stops its activity.
+* **switchToBusyMode()**: notify that the tool is working.
+* **switchToWaitingMode()**: notify that the tool stops its activity.
 
 ## Cache
 
 In the cache are pushed tool's output strings.
 
-Cache's data can be retrieved with get() and formated before being displayed.
+Cached data can be retrieved with **get()** and formated before being displayed.
 
 ### Methods
 
@@ -37,5 +37,5 @@ Cache's data can be retrieved with get() and formated before being displayed.
 export type CacheBlob = { data: any, time: number, };
 ```
 
-* **get()** return a list of CacheBlob which contains the data.
-* **push(data: any)** return a void, this method take a data and add it in the cache list returned by the get() method.
+* **get()**: returns a list of **CacheBlob** objects which contain the data.
+* **push(data: any)**: takes data and adds it to the cache list.

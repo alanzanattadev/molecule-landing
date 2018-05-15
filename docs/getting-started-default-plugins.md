@@ -7,14 +7,15 @@ Default plugins
 
 Molecule is shipped with default plugins for the following tools:
 
+- C++ (clang and CMake)
 - ChromeDevtools
 - Eslint
 - Flowtype
-- Nightwatch
-- Docker
 - Gulp
 - Jest
+- Nightwatch
 - NPM
+- Docker
 - React Native
 - Redux Devtools
 - Testcafe

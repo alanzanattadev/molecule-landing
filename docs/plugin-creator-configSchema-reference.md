@@ -2,22 +2,22 @@
 title: ConfigSchema Reference
 ---
 
-The `configSchema` object is the field of a plugin that defines which options
+The **configSchema** object is the field of a plugin that defines which options
 the user can tweak when [creating a plan](../new-user/creating-a-plan.md) for
 the plugin.
 
 The plan creation process follows these steps:
 
   * When opening the **Plan configuration** panel for a plugin, Molecule
-  generates its UI from the plugin's `configSchema` field.
+  generates its UI from the plugin's **configSchema** field.
   * The user fills out the generated form.
-  * The user clicks the "Create" button.
-  * Molecule generates a `plan.config` object from the user's choices
+  * The user clicks the **Create** button.
+  * Molecule generates a **plan.config** object from the user's choices
   ([see below](#plan-config)).
 
 ## ConfigSchemaPart
 
-A plugin's `configSchema` must be an object of type **ConfigSchemaPart**.
+A plugin's **configSchema** must be an object of type **ConfigSchemaPart**.
 
 A **ConfigSchemaPart** object represents either a form input, or a group of
 inputs. It must have the following fields:
@@ -30,28 +30,28 @@ inputs. It must have the following fields:
 > Note: the input's title and description may be displayed differently
 depending on its type
 
-The `type` field defines which HTML representation Molecule uses to display
+The **type** field defines which HTML representation Molecule uses to display
 the form input. For instance, a **ConfigSchemaPart** object with `type: "boolean"`
 will be represented as a checkbox.
 
-## `plan.config`
+## PlanObject
 
-Once the user has filled out the generator forms and clicked the "Create"
-button, a value of type `PlanObject` is generated from their choices, and
-passed to the plugin's `getStrategyForPlan` method as `plan.config`.
+Once the user has filled out the generator forms and clicked the **Create**
+button, a value of type **PlanObject** is generated from their choices, and
+passed to the plugin's **getStrategyForPlan** method as **plan.config**.
 
 The exact type and content of this value depends on the **ConfigSchemaPart**'s
-`type` field.
+**type** field.
 
 ## List of ConfigSchemaPart types
 
-The **ConfigSchemaPart**'s `type` field can have the following values:
+The **ConfigSchemaPart**'s **type** field can have the following values:
 
 ### string
 
 Asks the user to enter a string (text input).
 
-**ConfigSchemaPart** objects of type `string` may have an additional field:
+**ConfigSchemaPart** objects of type **string** may have an additional field:
 
 * **placeholder** _(optional)_: a hint inside the input box.
 
@@ -153,7 +153,7 @@ Example:
 }
 ```
 
-**Generated PlanObject:** a JavaScript Object; its keys are the `schemas` field's
+**Generated PlanObject:** a JavaScript Object; its keys are the **schemas** field's
 keys, its values are generated recursively from the respective schemas.
 
 Example:
@@ -200,7 +200,7 @@ Example:
 ```
 
 **Generated PlanObject:** a JavaScript Array of **PlanObject**s; its values
-are generated recursively from the `items` schema.
+are generated recursively from the **items** schema.
 
 ``` js
 for (let dock of plan.config ) {
@@ -235,7 +235,7 @@ Example:
 }
 ```
 
-**Generated PlanObject:** the `value` field of the chosen option.
+**Generated PlanObject:** the **value** field of the chosen option.
 
 Example:
 
@@ -255,15 +255,15 @@ else if (compileMode == "test") {
 
 ### conditional
 
-Displays different forms depending on what the user enters in its `expression`
+Displays different forms depending on what the user enters in its **expression**
 input. You can think of it as the equivalent of a switch statement.
 
 Additional fields:
-* **expression**: a **ConfigSchemaPart** object (usually of type "enum").
+* **expression**: a **ConfigSchemaPart** object (usually of type **enum**).
 ask the user for input using one of the above types
 * **cases**: a Javascript Object; its values must be instances of
 **ConfigSchemaPart**. The case whose key matches the value entered into the
-`expression` input is displayed below it. If no key matches, no value is
+**expression** input is displayed below it. If no key matches, no value is
 displayed.
 
 Example:
@@ -297,7 +297,7 @@ Example:
 
 **Generated PlanObject:** an object with the following fields:
 
-* **expressionValue**: a string generated from the `expression` schema.
+* **expressionValue**: a string generated from the **expression** schema.
 * **caseValue**: a **PlanObject** generated from the matching case.
 
 Example:
