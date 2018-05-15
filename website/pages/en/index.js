@@ -119,28 +119,28 @@ const Features = props => (
   <Block layout="twoColumn">
     {[
       {
-        content: 'As developers thriving for efficiency during labor, we all ended up in a situation where every time you want to work, you have to start a numerous amount of tools in X terminals spread over Y work-spaces. This is where Molecule takes root, we create a toolbox from which you will be able to access all your tools easily.',
+        title: 'Centralized Toolbox',
+        content: 'As developers, we all want an efficient workflow. We\'ve all been in a situation where every time we get to work, we have to start a large number of tools in X terminals spread over Y work-spaces. This is where Molecule takes root: we create a single, unified toolbox from which you will be able to access all your tools with ease.',
         image: imgUrl('icons8-toolbox-filled-100.png'),
         imageAlign: 'top',
-        title: 'Centralized Toolbox',
       },
       {
-        content: 'Your tools execution has never been simpler, you will be able to configure as much way to execute your tool as you like & save them as \'Plans\'. A \'plan\' is a simple button which will execute your tool with the corresponding configuration.',
+        title: 'Unified Execution',
+        content: 'Executing your tools has never been simpler. You will be able to configure as many ways to execute your tool as you like & save them as \'Plans\'. A \'plan\' is a simple button which will execute your tool with the corresponding configuration.',
         image: imgUrl('icons8-settings-filled-100.png'),
         imageAlign: 'top',
-        title: 'Unified Execution',
       },
       {
-        content: 'Molecule aspires to be revolutionary in terms of information readability, we wish to offer you a clear and simple way of navigating through your tools logs. Diagnostic is the name we gave to a log entity, a diagnostic can be 1 error for a tool and a group of 5 warnings for some other tool. The point is no matter the tool, a diagnostic is easy to read for a better understanding of the problem and can lead to an easy fix.',
+        title: 'Clear Information Flow',
+        content: 'Molecule aspires have an information readability nothing short of revolutionary: we wish to offer you a clear and simple way of navigating through your tools\' logs. Information is displayed through entities we call Diagnostics. A diagnostic can be a signle error for a tool and a group of five warnings for another, but it\'s always easy to read, to help you understand your tools and fix the problems that pop up.',
         image: imgUrl('icons8-list-filled-100.png'),
         imageAlign: 'top',
-        title: 'Clear Information Flow',
       },
       {
-        content: 'We provide you a first tool set for web development, but Molecule will target way more stacks ! We\'ll support mobile, devops and back-end development in the future too ! We\'re also making the plugin system flexible to let you integrate your own tools, whether they\'re propriotary or not. Keep in mind current integrations are partials, it will evolve.',
+        title: 'A first tool set for web developers',
+        content: 'We currently provide you a tool set for web development, but Molecule will target way more stacks! We\'ll support mobile, devops and back-end development in the future too! We\'re also making the plugin system flexible to let you integrate your own tools, whether they\'re proprietary or not, and the API is always evolving to allow you to create more complete plugins.',
         image: imgUrl('icons8-support-filled-100.png'),
         imageAlign: 'top',
-        title: 'A first tool set for web developers',
       },
     ]}
   </Block>
