@@ -1,17 +1,16 @@
 {
   "docs": {
     "Getting Started": [
-      "installation",
-      "createplan",
-      "usingplan",
-      "defaultplugins"
+      "getting-started-introduction",
+      "getting-started-using-a-plan",
+      "getting-started-creating-a-plan",
+      "getting-started-default-plugins"
     ],
-    "Create a Plugin": [
-      "createPlugin",
-      "configSchemaRef",
-      "helperAPI",
-      "taskAPI"
-    ],
-    "Developper documentation": ["questionsystem"]
+    "Plugin creation": [
+      "plugin-creator-create-plugin",
+      "plugin-creator-configSchema-reference",
+      "plugin-creator-HelperAPI-reference",
+      "plugin-creator-TaskAPI-reference"
+    ]
   }
 }

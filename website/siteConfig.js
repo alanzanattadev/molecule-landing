@@ -22,7 +22,7 @@ const siteConfig = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'Molecule Project',
   headerLinks: [
-    {doc: 'installation', label: 'Getting Started'},
+    {doc: 'getting-started-introduction', label: 'Getting Started'},
     {blog: false, label: "Blog"},
     {label: "Github", href: "https://github.com/alanzanattadev/atom-molecule-dev-environment"},
   ],
