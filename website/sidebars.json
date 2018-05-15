@@ -1,0 +1,16 @@
+{
+  "docs": {
+    "Getting Started": [
+      "getting-started-introduction",
+      "getting-started-using-a-plan",
+      "getting-started-creating-a-plan",
+      "getting-started-default-plugins"
+    ],
+    "Plugin creation": [
+      "plugin-creator-create-plugin",
+      "plugin-creator-configSchema-reference",
+      "plugin-creator-HelperAPI-reference",
+      "plugin-creator-TaskAPI-reference"
+    ]
+  }
+}
