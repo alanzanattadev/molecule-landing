@@ -2,9 +2,6 @@
 title: Default plugins
 ---
 
-Default plugins
-===============
-
 Molecule is shipped with default plugins for the following tools:
 
 - C++ (clang and CMake)
