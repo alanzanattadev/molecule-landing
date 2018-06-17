@@ -46,28 +46,8 @@ Installation
 
 3.  **Install Molecule**
 
-    Molecule isn't available on `apm` (the official tool for downloading Atom
-    packages) yet. To install Molecule, use the following commands:
-
-    ```
-    git clone https://github.com/alanzanattadev/atom-molecule-dev-environment.git
-    cd atom-molecule-dev-environment
-    git checkout v0.4.0
-    npm install
-    apm link
-    ```
-
-    Molecule should then be installed the next time you start Atom.
+  Molecule is available on `apm` (the official tool for downloading Atom packages). Run `apm install molecule`, or install Molecule from your package browser (`ctrl-shift-p Install Packages And Themes`).
 
 ![Your screen shoud look roughly like this](assets/molecule-start.png)
 
-### Update
-
-```bash
-  cd atom-molecule-dev-environment
-  git checkout vX.Y.Z # Where X.Y.Z is the current version number
-  rm -rf node_modules
-  npm install
-```
-
-And reload atom!
+Molecule should then be installed the next time you start Atom.
