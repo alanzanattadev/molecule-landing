@@ -9,4 +9,4 @@ branches:
   - master
 
 install: cd website/ && yarn
-script: cd website/ && yarn build && yarn deploy
+script: yarn build && yarn deploy
