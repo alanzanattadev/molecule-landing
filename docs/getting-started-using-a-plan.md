@@ -2,25 +2,30 @@
 title: Using a plan
 ---
 
-When starting Atom, your screen should look somewhat like this:
+When starting Atom with Molecule, your screen should look somewhat like this:
 
 ![Starting screen. Notice the panel at the bottom](assets/molecule-start.png)
 
-*Note: for the sake of this tutorial, we are browsing [the Molecule repository](https://github.com/alanzanattadev/atom-molecule-dev-environment/)*
+*Note: for the sake of this tutorial, we are browsing
+[the Molecule repository](https://github.com/alanzanattadev/atom-molecule-dev-environment/)*
 
-The main addition is the **Control Panel**, which is located at the bottom of
-the screen by default. On the left of this panel is the **Plugin Subpanel**.
+The main addition of Molecule is the **Control Panel**, which is located at the bottom of
+the screen by default. It allows you to control the execution of tools on your project through plugins,
+and offers you an easy-to-read, fancy view of their output.
 
-Plugin Subpanel
+On the left of this panel is the **plugin panel**.
+
+Plugin Panel
 ---------------
 
-The Plugin Subpanel displays a list of Molecule plugins, that adapts to the
-current project by only displaying plugins for tools the project actually uses.
+The plugin sub-panel displays a list of Molecule plugins available for tools
+the project actually uses. Plugins related to technologies not used in the project
+are hidden.
 
 Molecule decides which tools the project uses by browsing for files that we call
 **Packages**. For instance, if the project directory has an `.eslintrc` file,
 then Molecule considers that the project uses the Eslint tool, and displays the
-Eslint plugin in the Plugin Subpanel.
+Eslint plugin in the Plugin Panel.
 
 Which files count as a package varies from plugin to plugin. Most Node.js
 plugins consider `package.json` to be a package file if the corresponging tool
@@ -28,69 +33,100 @@ is installed in `node_modules`.
 
 ### Plans
 
-To execute these plugins, you need to create a **Molecule plan**. A plan is a
-reusable action that executes a given plugin with pre-registered parameters. For
-instance, you can create a plan for the NPM plugin that will always call
-`npm run start`.
+To execute these plugins, you need to create a **plan**. A plan is a
+configuration that executes a given plugin with pre-registered parameters. For
+instance, you can create a plan for NPM that will always call `npm run start`.
 
-Each plugin is displayed with a list of plugin-specific, pre-generated plans,
-and an option to [create a new plan](creating-a-plan.md).
+Each plugin is displayed with a list of  pre-generated plans and an option to
+[create a new plan](getting-started-creating-a-plan.md).
 
-Each plan is displayed with two buttons:
+Each plan is displayed with three buttons:
+
+- A **Split** button that will split the Control Panel in two part and will open the
+plan in the newly created Control Panel. This allow you to see multiple plans at the
+same time, and easily move the Control Panel wherever you want in Atom.
 
 - A **Pin** button, that adds the plan to a list of "pinned" plans displayed above
 the Control Panel.
 
 - A **Play** button that runs/stops the execution of the plan.
 
-![Plugin subpanel](assets/plugin-subpanel.png)
+![Plugin Panel](assets/plugin-panel.png)
 
-Click the Play button next to the npm plan "eslint". Two additional buttons
-should appear under that plan:
+When started, two additional buttons should appear under the plan name.
 
 ![Eslint plan buttons](assets/eslint-plan-buttons.png)
 
-- The Diagnostics button opens the [Diagnostics Subpanel](#diagnostics-subpanel).
+- The Diagnostics button opens the [Diagnostics Panel](#diagnostics-panel).
 
-- The Terminal button opens the [Terminal Subpanel](#terminal-subpanel).
+- The Terminal button opens the [Terminal Panel](#terminal-panel).
 
-As you may have noticed, the Jest plan "Watch mode" runs in, well, watch mode:
-this means it never stops until you click the play button again. If you edit one
-of your source files, the changes will be sent to the running instance of Jest.
-If these changes cause new errors, Jest will send error messages automatically
-(see below).
+#### Watch Mode
 
-Most of the "watch mode" plans are automatically executed on startup.
+Some plan can be run in "watch mode". The watch mode allow a tool to
+run in the background and check your files when modifications are saved.
+A typical example is testing tools: every time you edit a file, it will
+run the test suite of your project to ensure that you did not broke anything.
 
-Diagnostics Subpanel
+Most of the "watch mode" plans available for your project (such as test,
+static analysis, linter, ...) are automatically executed on startup.
+
+Diagnostics Panel
 --------------------
 
 All Molecule plugins have the same workflow:
 
-* They analyse your project's files.
-* They execute some operation on these files
-* They output a stream of plugin-dependent messages.
+* They analyse your project's files to find the files they are interested by ;
+* They execute some operation on these files (analyse, testing,...) ;
+* They output a stream of messages to describe their result ;
 
 These messages are called **Diagnostics**, and can be accessed in the
-**Diagnostics Subpanel**.
+**Diagnostics Panel**.
 
-![The Diagnostics Subpanel](assets/diagnostics-closeup.png)
+![The Diagnostics Panel](assets/diagnostics-closeup.png)
 
-Once you've executed a plan, the Diagnostics Subpanel will start to
-fill. There are several types of diagnostics, with different colors:
+Once you've executed a plan, the Diagnostics Panel will start to be
+filled of Diagnostics. There are several types of them, with different colors:
 
 - Errors
 - Warnings
-- Informations
+- Information
 - Hints
 - Successes
 
 For most plugins, diagnostics are only sent if you do something wrong. They
-indicate syntax errors, code smells, etc.
+indicate syntax errors, code smells, test failure, etc.
 
-Clicking on a diagnostic will lead you to the place in the code it concerns. For
+Clicking on a diagnostic will jump to the code it concerns. For
 instance, clicking on a syntax error diagnostic will open the relevant file, and
-place your cursor at the beginning of the error.
+place your cursor at the line of the error.
+
+### Filtering diagnostics
+
+Molecule allows you to easily filter the diagnostics of your project.
+You can either hide by severity by clicking on the corresponding icons, next to which
+the number of diagnostics with this severity is displayed, or by searching for
+a specified term.
+
+In the later case, the search will be performed on the diagnostic content and only
+the ones corresponding to your search will be displayed. It can be used to show
+diagnostics only for a specific file or subject.
+
+To clear the search, you just have to click on the `x` icon next to the search bar.
+
+To show the diagnostics that were hidden, simply click again on the severity icon.
+When enabled, the number of diagnostics corresponding to this severity will be displayed.
+
+### Unified Diagnostics
+
+When working with different tools at the same time, it can be useful to get a summary of
+all diagnostics for the project. Molecule provides you the **Unified Diagnostics** panel
+to do that.
+
+The Unified Diagnostics panel is accessible from the top of the Control Panel. It works
+in the same way as plugins' diagnostics panels except that it summarise all diagnostics
+in the project. You can therefore [filter them](#filtering-diagnostics) to have a general
+overview of the project, or see the diagnostics for a specified term or file.
 
 Terminal panel
 --------------
@@ -98,12 +134,13 @@ Terminal panel
 Most Molecule plugins use a command-line tool. For instance, the Eslint plugin
 is based on the `eslint` CLI.
 
-While plugins try to parse the text these CLIs output into more readable
-diagnostics, sometimes you may want to read the text output directly. You can
-switch to the **Terminal Panel** by clicking on the **Terminal** button under the
-concerned plan.
+While plugins transform the text these commands output into a more readable
+format, sometimes you may want to read the raw output directly. You achieve this by
+by clicking on the **Terminal** button to switch to the **Terminal Panel**.
 
 ![The Terminal Panel](assets/terminal-closeup.png)
 
-Some plugins may ask you to enter text into the Terminal Panel (ex: a password).
-However, in most cases, interacting with the Terminal is impossible.
+Some tools may need user interaction to work (by entering some text or password for
+example) and the terminal allows you to easily do this. However, please note that if
+the tool does not ask for interaction, you won't be able to do anything with the terminal
+except reading it.
