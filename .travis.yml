@@ -1,0 +1,13 @@
+language: node_js
+before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
+install:
+  - cd website/ && yarn
+
+build:
+  - cd website/ && yarn build
+
+deploy:
+  - cd website/ && yarn deploy  

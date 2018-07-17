@@ -6,7 +6,9 @@
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
-    "rename-version": "docusaurus-rename-version"
+    "rename-version": "docusaurus-rename-version",
+    "deploy":
+      "aws s3 sync './build/Molecule\\ Project' s3://www.molecule.sh --acl public-read && curl http://molecule.sh"
   },
   "devDependencies": {
     "docusaurus": "^1.0.5"
