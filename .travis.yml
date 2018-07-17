@@ -8,18 +8,5 @@ branches:
   only:
   - master
 
-stages:
-  - install
-  - build
-  - deploy
-
-jobs:
-  include:
-    - stage: install
-      script: cd website/ && yarn
-
-    - stage: build
-      script: cd website/ && yarn build
-
-    - stage: deploy
-      script: cd website/ && yarn deploy  
+install: cd website/ && yarn
+script: cd website/ && yarn build && yarn deploy
