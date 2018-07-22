@@ -4,7 +4,7 @@
       "getting-started-introduction",
       "getting-started-using-a-plan",
       "getting-started-creating-a-plan",
-      "getting-started-default-plugins"
+      "getting-started-bundled-plugins"
     ],
     "Plugin creation": [
       "plugin-creator-create-plugin",
