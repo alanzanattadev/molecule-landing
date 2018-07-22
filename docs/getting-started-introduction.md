@@ -37,17 +37,25 @@ environments, developers can easily add plug-ins to Molecule (as Atom packages).
 Users are able to download the plug-ins to adapt to new langages, without having
 to change their IDE, habits, settings, keybindings, etc.
 
-Installation
-------------
+Install
+-------
 
-1.  **[Install Atom](http://flight-manual.atom.io/getting-started/sections/installing-atom/) version 1.17.0 or higher**
+1.  **[Install Atom](http://flight-manual.atom.io/getting-started/sections/installing-atom/)**
 
 2.  **Install [Watchman](https://facebook.github.io/watchman/)**
 
 3.  **Install Molecule**
 
-  Molecule is available on `apm` (the official tool for downloading Atom packages). Run `apm install molecule`, or install Molecule from your package browser (`ctrl-shift-p Install Packages And Themes`).
+  Molecule is available on `apm` (the official tool for downloading Atom packages).
+  Run `apm install molecule`, or install Molecule from your package browser
+  (`ctrl-shift-p`, type `Install Packages And Themes` and search for Molecule).
 
 ![Your screen shoud look roughly like this](assets/molecule-start.png)
 
 Molecule should then be installed the next time you start Atom.
+
+Uninstall
+---------
+
+Run `apm uninstall molecule`, or uninstall Molecule from your package browser
+(`ctrl-shift-p`, type `Uninstall Packages` and uninstall Molecule).
