@@ -42,9 +42,9 @@ Each plugin is displayed with a list of  pre-generated plans and an option to
 
 Each plan is displayed with three buttons:
 
-- A **Split** button that will split the Control Panel in two part and will open the
-plan in the newly created Control Panel. This allow you to see multiple plans at the
-same time, and easily move the Control Panel wherever you want in Atom.
+- A **Split** button that will split the Control Panel in two parts and will open the
+plan in the newly created Control Panel. This allows you to see multiple plans at the
+same time.
 
 - A **Pin** button, that adds the plan to a list of "pinned" plans displayed above
 the Control Panel.
@@ -66,7 +66,7 @@ When started, two additional buttons should appear under the plan name.
 Some plan can be run in "watch mode". The watch mode allow a tool to
 run in the background and check your files when modifications are saved.
 A typical example is testing tools: every time you edit a file, it will
-run the test suite of your project to ensure that you did not broke anything.
+run the test suite of your project to ensure that you did not break anything.
 
 Most of the "watch mode" plans available for your project (such as test,
 static analysis, linter, ...) are automatically executed on startup.
@@ -76,8 +76,8 @@ Diagnostics Panel
 
 All Molecule plugins have the same workflow:
 
-* They analyse your project's files to find the files they are interested by ;
-* They execute some operation on these files (analyse, testing,...) ;
+* They analyse your project's files to find the files they are interested in ;
+* They execute some operation on these files (syntax analysis, unit tests, etc) ;
 * They output a stream of messages to describe their result ;
 
 These messages are called **Diagnostics**, and can be accessed in the
@@ -85,8 +85,8 @@ These messages are called **Diagnostics**, and can be accessed in the
 
 ![The Diagnostics Panel](assets/diagnostics-closeup.png)
 
-Once you've executed a plan, the Diagnostics Panel will start to be
-filled of Diagnostics. There are several types of them, with different colors:
+Once you've executed a plan, the Diagnostics Panel will start to fill with
+Diagnostics. There are several types of these, with different colors:
 
 - Errors
 - Warnings
@@ -103,14 +103,18 @@ place your cursor at the line of the error.
 
 ### Filtering diagnostics
 
-Molecule allows you to easily filter the diagnostics of your project.
-You can either hide by severity by clicking on the corresponding icons, next to which
-the number of diagnostics with this severity is displayed, or by searching for
-a specified term.
+Molecule allows you to filter the diagnostics of your project.
 
-In the later case, the search will be performed on the diagnostic content and only
-the ones corresponding to your search will be displayed. It can be used to show
-diagnostics only for a specific file or subject.
+There are several icons displayed, that represent the different levels of
+diagnostic severity. For each severity level, the number of diagnostics
+with that severity is displayed next to the matching icon. You can click on
+each icon to toggle showing diagnostics with the matching severity level.
+
+By default, all diagnostics are displayed. When hidden, the severity icon uses
+a darker colour and the number of diagnostics is not displayed next to it.
+
+You can also search for a specific term. Only diagnostics with content matching
+the search term will displayed.
 
 To clear the search, you just have to click on the `x` icon next to the search bar.
 
@@ -141,6 +145,6 @@ by clicking on the **Terminal** button to switch to the **Terminal Panel**.
 ![The Terminal Panel](assets/terminal-closeup.png)
 
 Some tools may need user interaction to work (by entering some text or password for
-example) and the terminal allows you to easily do this. However, please note that if
+example); the terminal allows you to do this. However, please note that if
 the tool does not ask for interaction, you won't be able to do anything with the terminal
 except reading it.
