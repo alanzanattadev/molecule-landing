@@ -13,9 +13,9 @@ The main addition of Molecule is the **Control Panel**, which is located at the 
 the screen by default. It allows you to control the execution of tools on your project through plugins,
 and offers you an easy-to-read, fancy view of their output.
 
-On the left of this panel is the **plugin panel**.
+On the left of this panel is the **plugin sub-panel**.
 
-Plugin Panel
+Plugin Sub-panel
 ---------------
 
 The plugin sub-panel displays a list of Molecule plugins available for tools
@@ -25,7 +25,7 @@ are hidden.
 Molecule decides which tools the project uses by browsing for files that we call
 **Packages**. For instance, if the project directory has an `.eslintrc` file,
 then Molecule considers that the project uses the Eslint tool, and displays the
-Eslint plugin in the Plugin Panel.
+Eslint plugin in the Plugin Sub-panel.
 
 Which files count as a package varies from plugin to plugin. Most Node.js
 plugins consider `package.json` to be a package file if the corresponging tool
@@ -51,15 +51,15 @@ the Control Panel.
 
 - A **Play** button that runs/stops the execution of the plan.
 
-![Plugin Panel](assets/plugin-panel.png)
+![Plugin Sub-panel](assets/plugin-sub-panel.png)
 
 When started, two additional buttons should appear under the plan name.
 
 ![Eslint plan buttons](assets/eslint-plan-buttons.png)
 
-- The Diagnostics button opens the [Diagnostics Panel](#diagnostics-panel).
+- The Diagnostics button opens the [Diagnostics Sub-panel](#diagnostics-sub-panel).
 
-- The Terminal button opens the [Terminal Panel](#terminal-panel).
+- The Terminal button opens the [Terminal Sub-panel](#terminal-sub-panel).
 
 #### Watch Mode
 
@@ -71,7 +71,7 @@ run the test suite of your project to ensure that you did not break anything.
 Most of the "watch mode" plans available for your project (such as test,
 static analysis, linter, ...) are automatically executed on startup.
 
-Diagnostics Panel
+Diagnostics Sub-panel
 --------------------
 
 All Molecule plugins have the same workflow:
@@ -81,11 +81,11 @@ All Molecule plugins have the same workflow:
 * They output a stream of messages to describe their result ;
 
 These messages are called **Diagnostics**, and can be accessed in the
-**Diagnostics Panel**.
+**Diagnostics Sub-panel**.
 
-![The Diagnostics Panel](assets/diagnostics-closeup.png)
+![The Diagnostics Sub-panel](assets/diagnostics-closeup.png)
 
-Once you've executed a plan, the Diagnostics Panel will start to fill with
+Once you've executed a plan, the Diagnostics Sub-panel will start to fill with
 Diagnostics. There are several types of these, with different colors:
 
 - Errors
@@ -124,15 +124,15 @@ When enabled, the number of diagnostics corresponding to this severity will be d
 ### Unified Diagnostics
 
 When working with different tools at the same time, it can be useful to get a summary of
-all diagnostics for the project. Molecule provides you the **Unified Diagnostics** panel
+all diagnostics for the project. Molecule provides you the **Unified Diagnostics** sub-panel
 to do that.
 
-The Unified Diagnostics panel is accessible from the top of the Control Panel. It works
-in the same way as plugins' diagnostics panels except that it summarise all diagnostics
+The Unified Diagnostics Sub-panel is accessible from the top of the Control Panel. It works
+in the same way as plugins' diagnostics sub-panels except that it summarise all diagnostics
 in the project. You can therefore [filter them](#filtering-diagnostics) to have a general
 overview of the project, or see the diagnostics for a specified term or file.
 
-Terminal panel
+Terminal Sub-panel
 --------------
 
 Most Molecule plugins use a command-line tool. For instance, the Eslint plugin
@@ -140,9 +140,9 @@ is based on the `eslint` CLI.
 
 While plugins transform the text these commands output into a more readable
 format, sometimes you may want to read the raw output directly. You achieve this by
-by clicking on the **Terminal** button to switch to the **Terminal Panel**.
+by clicking on the **Terminal** button to switch to the **Terminal Sub-panel**.
 
-![The Terminal Panel](assets/terminal-closeup.png)
+![The Terminal Sub-panel](assets/terminal-closeup.png)
 
 Some tools may need user interaction to work (by entering some text or password for
 example); the terminal allows you to do this. However, please note that if
