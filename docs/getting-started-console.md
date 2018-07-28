@@ -36,7 +36,7 @@ Source filtering
 ----------------
 
 Molecule allows you to select which source you want to display in the Console.
-Bellow the Console button you'll find a list of source providing messages to the
+Below the Console button you'll find a list of source providing messages to the
 console. You can check the checkbox next to them to enable or disable the sources.
 
 **Info**: for now, the only source supported by Molecule is Molecule itself. This
