@@ -142,7 +142,7 @@ While plugins transform the text these commands output into a more readable
 format, sometimes you may want to read the raw output directly. You achieve this by
 by clicking on the **Terminal** button to switch to the **Terminal Sub-panel**.
 
-![The Terminal Sub-panel](assets/terminal-closeup.png)
+![The Terminal Sub-panel](assets/plan-terminal-closeup.png)
 
 Some tools may need user interaction to work (by entering some text or password for
 example); the terminal allows you to do this. However, please note that if
