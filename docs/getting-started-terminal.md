@@ -8,7 +8,7 @@ might contains bugs, missing features, or does not work under certain circumstan
 Molecule integrates a terminal in the [Control Panel](getting-started-using-a-plan.md)
 letting you accessing your shell directly from Molecule without using an external program.
 
-![Terminal overview](terminal-overview.png)
+![Terminal overview](assets/terminal-overview.png)
 
 You can create a terminal by clicking on the **New terminal** button under the project name.
 This will create a new terminal instance that will be listed above the **New terminal** button,
