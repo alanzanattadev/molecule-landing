@@ -24,7 +24,7 @@ and are:
 Event logged
 ------------
 
-Molecule log automatically the following events:
+Molecule automatically logs the following events:
 
 - Plan creation and deletion (including auto-generated plans) ;
 - Plan start/stop/kill/crash ;
