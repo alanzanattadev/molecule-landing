@@ -5,7 +5,8 @@
       "getting-started-using-a-plan",
       "getting-started-creating-a-plan",
       "getting-started-bundled-plugins",
-      "getting-started-console"
+      "getting-started-console",
+      "getting-started-linter"
     ],
     "Plugin creation": [
       "plugin-creator-create-plugin",
