@@ -26,5 +26,5 @@ The terminal integration currently has some limitations:
 such as `CTRL+C` or `CTRL+D` are available.
 - Once created, a terminal cannot be closed. After exiting shell, the terminal will
 remain open in read-only mode.
-- There is no way to choose the shell to open and the terminal will simply open the default
+- There is no way to choose which shell to run and the terminal will simply open the default
 user shell.
