@@ -2,6 +2,9 @@
 title: Console
 ---
 
+The Console
+===========
+
 To keep track of what is happening in your project, Molecule provides
 a console giving you a quick overview of all events happening in Molecule.
 

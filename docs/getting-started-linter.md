@@ -2,6 +2,9 @@
 title: Linter Integration
 ---
 
+Linter Integration
+==================
+
 When writing code, most developers like to see problems and code smells directly
 in their code, without switching to an external window or panel.
 
