@@ -2,6 +2,9 @@
 title: Terminal Integration
 ---
 
+Terminal Integration
+====================
+
 **Warning:** This is an experimental feature that is still under development and
 might contains bugs, missing features, or does not work under certain circumstances.
 
