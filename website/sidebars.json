@@ -12,6 +12,6 @@
       "plugin-creator-HelperAPI-reference",
       "plugin-creator-TaskAPI-reference"
     ],
-    "Core": ["core-execution"]
+    "Core": ["core-execution", "core-workflow", "core-lsp-extension"]
   }
 }
