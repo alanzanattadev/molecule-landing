@@ -6,7 +6,7 @@ title: Workflow
 
 ## Folders structure
 
-Molecule is made of different parts that are organized under two hierarchical elements: Epics and Features. This terminology comes from Scrum, an agile method. Terminologies can differ depending on scrum implementations, but you can learn from it on https://www.atlassian.com/agile/project-management/epics-stories-themes.
+Molecule is made of different parts that are organized under two hierarchical elements: Epics and Features. This terminology comes from Scrum, an agile method. Terminologies can differ depending on scrum implementations, but you can check it on [Atlassian documentation](https://www.atlassian.com/agile/project-management/epics-stories-themes).
 
 Warning: do not be confused between Agile Epics and redux-observables Epics. We'll use the term "Epic" with the Agile meaning here.
 
@@ -54,13 +54,11 @@ Let's say you want to add a new feature and that this feature contains a User In
 
 The first thing you'll want to add is your UI. To quickly iterate on the code, we have an integration of storybook in Molecule.
 
-Add a storybook story, and iterate on your components (which will be located in YourFeature/Presenters/). You can find a documentation on how to write stories here: https://storybook.js.org/basics/writing-stories/ 
+Add a storybook story, and iterate on your components (which will be located in YourFeature/Presenters/). You can find a documentation on [how to write stories](https://storybook.js.org/basics/writing-stories/)
 
 ### Unit tests
 
-Once you're confident with the UI, you can start adding the model code. Start with a unit test. We use Jest in Molecule to handle unit testing.
-
-https://jestjs.io/docs/en/getting-started
+Once you're confident with the UI, you can start adding the model code. Start with a unit test. We use[ Jest](https://jestjs.io/docs/en/getting-started) in Molecule to handle unit testing.
 
 The first thing you can build is the reducer, which will handle data states. Start by adding unit tests for your new reducer and then code it to pass the tests.
 
@@ -78,7 +76,7 @@ Launch atom with "atom -d" (development / debug mode) and iterate by coding and 
 
 Bugs can be hard to track down. We provide you several tools to be able to develop with confidence features on Molecule.
 
-The first one is the redux devtools https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en . Molecule is already configured for interacting with the devtools.
+The first one is the [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) . Molecule is already configured for interacting with the devtools.
 
 The second one is our own console. Interactions with language servers, errors coming from tools execution, are all logged in the Molecule console.
 
