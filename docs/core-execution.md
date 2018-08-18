@@ -4,17 +4,7 @@ title: Tool execution
 
 ## Concepts
 
-Molecule has several internal concepts to represent the different parts of the whole architecture. Among them there are:
-
-- Strategy
-- Runner
-- Stager
-- Controller
-- Plan
-- Execution
-- Plugin
-- Core
-
+Molecule implements several concepts in order to achieve a unified experience, those concepts can be confusing for new-comers, so this part of the documentation will help you get through all of them.
 
 
 ### Plugin
@@ -55,7 +45,7 @@ Once the strategy is generated, it is interpreted by what we call a runner. Each
 
 It's basically a generic interface to make easy the addition of new ways of executing tools in Molecule. It provides a unified API for any kind of tool execution.
 
-Because Molecule supports language servers (with the Language Server Protocol, LSP), each runner has the ability to define whether it supports it or not. Indeed, some strategy involves unreadable outputs (like the pty strategy which makes use of ansii codes) leading to the inability to parse the LSP. It's the role of the runner to tell this information to Molecule.
+Because Molecule supports language servers (with the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), LSP), each runner has the ability to define whether it supports it or not. Indeed, some strategy involves unreadable outputs (like the pty strategy which makes use of ansii codes) leading to the inability to parse the LSP. It's the role of the runner to tell this information to Molecule.
 
 The code related to runners is in ExecutionControlEpic/LanguageServerProtocolFeature/Model/ 
 
@@ -85,7 +75,7 @@ The code related to stagers is in ExecutionControlEpic/LanguageServerProtocolFea
 
 #### Architecture
 
-Molecule's Core uses Redux and the flux pattern. If you don't know this architecture I let you check here: https://facebook.github.io/flux/docs/in-depth-overview.html#content
+Molecule's Core uses Redux and the Flux pattern.To discover the Flux pattern, you can[ read its official documentation](https://facebook.github.io/flux/docs/in-depth-overview.html#content).
 
 In order to handle UI changes and input controls in a consistent way, we chose this architecture. All the molecule state is stored in the Redux state, and state changes lead to a UI refresh. Modifications to the state is made by reducers which receive actions. Actions are simple descriptions of events happening.
 
@@ -95,7 +85,7 @@ Actions dispatched can trigger asynchronous behaviors, that dispatch themselves 
 
 #### Epics
 
-Epics are described here https://redux-observable.js.org/docs/basics/Epics.html.
+Epics are described in [Redux-Observable documentation](https://redux-observable.js.org/docs/basics/Epics.html).
 
 In Molecule we use epics to handle many things, including stager execution, LSP communications with the Controller, events buffering and file events handling.
 
