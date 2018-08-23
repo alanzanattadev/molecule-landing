@@ -14,6 +14,7 @@
       "plugin-creator-configSchema-reference",
       "plugin-creator-HelperAPI-reference",
       "plugin-creator-TaskAPI-reference"
-    ]
+    ],
+    "Core": ["core-execution", "core-workflow", "core-lsp-extension"]
   }
 }
