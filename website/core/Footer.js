@@ -34,10 +34,8 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-          <h5>Follow us !</h5>
-          <a href="https://twitter.com/moleculeide" target="_blank">
-            Twitter
-          </a>
+            <h5>Follow us on <a href="https://twitter.com/moleculeide" target="_blank">Twitter</a>!</h5>
+            <h5><a href="mailto:molecule_2019@labeip.epitech.eu">Contact us</a></h5>
           </div>
           <div>
             <a href="https://github.com/alanzanattadev/atom-molecule-dev-environment/">
