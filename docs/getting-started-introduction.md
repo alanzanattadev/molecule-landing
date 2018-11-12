@@ -2,9 +2,6 @@
 title: Introduction
 ---
 
-Introduction
-============
-
 What is Molecule?
 -----------------
 

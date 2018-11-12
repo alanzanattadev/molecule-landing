@@ -2,9 +2,6 @@
 title: Linter Integration
 ---
 
-Linter Integration
-==================
-
 When writing code, most developers like to see problems and code smells directly
 in their code, without switching to an external window or panel.
 
@@ -16,7 +13,7 @@ relevant piece of code.
 How to enable the linter?
 -------------------------
 
-You must have installed the [linter](https://atom.io/packages/linter) or 
+You must have installed the [linter](https://atom.io/packages/linter) or
 [atom-ide-ui](https://atom.io/packages/atom-ide-ui) package in order to enable the
 linting features of Molecule.
 

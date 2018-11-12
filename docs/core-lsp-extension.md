@@ -2,8 +2,6 @@
 title: LSP Extension
 ---
 
-# LSP Extension
-
 Molecule uses extensively the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/). It has its own implementation based on [vscode-jsonrpc](https://www.npmjs.com/package/vscode-jsonrpc). LSP is used through the whole execution pipeline, from the core to the actual language server.
 
 ## LSP for communicating with language servers
@@ -20,7 +18,7 @@ To provide such capabilities on Molecule, we created an execution pipeline that 
 
 The Controller acts as a proxy, and thus processes every message before actually transferring it. When the running tool is a language server, most of the messages are just transferred, but it's not always the case.
 
-## LSP for communicating with traditional tools 
+## LSP for communicating with traditional tools
 
 Molecule can run many tools, including language servers, but a lot of them are actually of another kind. Whether they are build tools, unit test tools, dependency managers or DevOps tools they are ran the same way. When the Controller executes a non-language server tool, it doesn't transfer its LSP messages to it. Instead, it processes the message and interacts differently with the tool. The same applies for messages coming from the running tool (output).
 
@@ -46,7 +44,7 @@ We created two new messages: terminal/input and terminal/output which both embed
 
 The second issue was the handling of the terminal resize developer side, and the update tool-side of this resize. In fact, terminal tool are run the same way on the remote machine than in a terminal, with a pty. This pty has to be updated when a resize occurs, and so the Controller has to do it. To be able to achieve that, it has to be notified when this occurs.
 
-We created a new kind of message: terminal/resize, this message embeds the new size of the terminal. 
+We created a new kind of message: terminal/resize, this message embeds the new size of the terminal.
 
 ### Workspace
 

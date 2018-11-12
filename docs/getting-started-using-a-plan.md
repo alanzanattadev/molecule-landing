@@ -1,9 +1,6 @@
 ---
-title: Using a plan
+title: How to use plans
 ---
-
-How to use plans
-================
 
 When starting Atom with Molecule, your screen should look somewhat like this:
 
