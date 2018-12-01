@@ -4,20 +4,60 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Centralize your tooling and focus on what matters",
-    "core-execution": "Tool execution",
-    "getting-started-creating-a-plan": "Creating a plan",
-    "getting-started-default-plugins": "Default plugins",
-    "getting-started-introduction": "Introduction",
-    "getting-started-using-a-plan": "Using a plan",
-    "plugin-creator-configSchema-reference": "ConfigSchema Reference",
-    "plugin-creator-create-plugin": "Creating a plugin",
-    "plugin-creator-HelperAPI-reference": "HelperAPI Reference",
-    "plugin-creator-TaskAPI-reference": "TaskAPI Reference",
-    "Getting Started": "Getting Started",
-    "Blog": "Blog",
-    "Github": "Github",
-    "Plugin creation": "Plugin creation",
-    "Core": "Core"
+    "docs": {
+      "core-execution": {
+        "title": "Tool execution"
+      },
+      "core-lsp-extension": {
+        "title": "LSP Extension"
+      },
+      "core-workflow": {
+        "title": "Workflow"
+      },
+      "getting-started-bundled-plugins": {
+        "title": "Bundled plugins"
+      },
+      "getting-started-console": {
+        "title": "Console"
+      },
+      "getting-started-creating-a-plan": {
+        "title": "Creating a plan"
+      },
+      "getting-started-introduction": {
+        "title": "Introduction"
+      },
+      "getting-started-linter": {
+        "title": "Linter Integration"
+      },
+      "getting-started-terminal": {
+        "title": "Terminal Integration"
+      },
+      "getting-started-using-a-plan": {
+        "title": "Using a plan"
+      },
+      "plugin-creator-configSchema-reference": {
+        "title": "ConfigSchema Reference"
+      },
+      "plugin-creator-create-plugin": {
+        "title": "Creating a plugin"
+      },
+      "plugin-creator-HelperAPI-reference": {
+        "title": "HelperAPI Reference"
+      },
+      "plugin-creator-TaskAPI-reference": {
+        "title": "TaskAPI Reference"
+      }
+    },
+    "links": {
+      "Getting Started": "Getting Started",
+      "Blog": "Blog",
+      "Github": "Github"
+    },
+    "categories": {
+      "Getting Started": "Getting Started",
+      "Plugin creation": "Plugin creation",
+      "Core": "Core"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
