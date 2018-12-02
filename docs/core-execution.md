@@ -62,6 +62,14 @@ It has the responsibility to execute the runner, to stop it, and to proxy data b
 
 The code related to the Controller is in ExecutionControlEpic/LanguageServerProtocolFeature/Model/
 
+#### LSP Communications
+
+LSP (Language Server Protocol) communications are made through and with the Controller. Those communications can notify the Core of many changes including the busy state of a process, new diagnostics, new terminal output. Some of the features are enhancements on the original Language Server Protocol, an extension made by us to handle features undefined in the protocol.
+
+If the process executed is ran by a strategy runner which supports language servers (and so is a language server), all the communications specified in the protocol are proxied by the Controller to the process. All the unspecified communications are only handled by the controller which knows what to do with it, without being proxied to the running process.
+
+If the running process is not a language server, the Controller is the only handler of the messages.
+
 ### Stager
 
 Molecule has an architecture that allows it to execute tools remotely, and for that, it had to provide a way to execute strategy runners and so the controller at different places. This is the role of the stager.
@@ -75,39 +83,3 @@ It has many roles:
 - to provide an input stream, an output stream and an event emitter for specific events (controller killed, exit, etc ...).
 
 The code related to stagers is in ExecutionControlEpic/LanguageServerProtocolFeature/Model/
-
-### Core
-
-#### Architecture
-
-Molecule's Core uses Redux and the Flux pattern.To discover the Flux pattern, you can[ read its official documentation](https://facebook.github.io/flux/docs/in-depth-overview.html#content).
-
-In order to handle UI changes and input controls in a consistent way, we chose this architecture. All the molecule state is stored in the Redux state, and state changes lead to a UI refresh. Modifications to the state is made by reducers which receive actions. Actions are simple descriptions of events happening.
-
-However, Molecule being a highly asynchronous environment, we chose to use redux-observable which allows us to work with RxJS (and so observables) to handle asynchronous parts.
-
-Actions dispatched can trigger asynchronous behaviors, that dispatch themselves new actions. This handler which uses actions to dispatch other actions during asynchronous behaviors is called an Epic.
-
-#### Epics
-
-Epics are described in [Redux-Observable documentation](https://redux-observable.js.org/docs/basics/Epics.html).
-
-In Molecule we use epics to handle many things, including stager execution, LSP communications with the Controller, events buffering and file events handling.
-
-#### LSP Communications
-
-LSP (Language Server Protocol) communications are made through and with the Controller. Those communications can notify the Core of many changes including the busy state of a process, new diagnostics, new terminal output. Some of the features are enhancements on the original Language Server Protocol, an extension made by us to handle features undefined in the protocol.
-
-If the process executed is ran by a strategy runner which supports language servers (and so is a language server), all the communications specified in the protocol are proxied by the Controller to the process. All the unspecified communications are only handled by the controller which knows what to do with it, without being proxied to the running process.
-
-If the running process is not a language server, the Controller is the only handler of the messages.
-
-### Execution
-
-Each running process is linked to a structure called Execution with its task identifier. The role of the execution is to handle process specific state (eg: instance of terminal) and process specific events (eg: terminal resizes). Executions are then stored in a class called ExecutionController.
-
-When an event (eg: a new terminal output) notifies the Core through LSP messages, Molecule's Core can get the corresponding execution with the task ID, and send the new output to the terminal instance this way.
-
-#### States
-
-Flux handles all the state which is serializable and linked to the UI. For all the non-serializable states (as terminal instances or network connections), separate stores are created. Those stores are simple map or lists encapsulated in a class. This class is generally named "SomethingController".

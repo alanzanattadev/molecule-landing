@@ -1,83 +1,163 @@
 ---
-title: Workflow
+title: Project structure
 ---
 
-# Workflow
+# Project structure
 
-## Folders structure
+## Folder structure
 
-Molecule is made of different parts that are organized under two hierarchical elements: Epics and Features. This terminology comes from Scrum, an agile method. Terminologies can differ depending on scrum implementations, but you can check it on [Atlassian documentation](https://www.atlassian.com/agile/project-management/epics-stories-themes).
+![Molecule's folder structure](assets/molecule-folders.png)
 
-Warning: do not be confused between Agile Epics and redux-observables Epics. We'll use the term "Epic" with the Agile meaning here.
+The most important folders in Molecule are:
 
-### Epic
+* `build/`: The target folder for Babel transcompilation.
+* `images/`: Stores the README images and the plugin icons.
+* `lib/`: Stores the actual source code.
 
-An Epic is a set of features. We can imagine different parts on an IDE (text edition, tools execution, project management, etc...) and an Epic is related to those big parts. In Molecule we have the lib/ folder which contains the javascript code, and the first folders we see are the epics.
+Molecule's code is sorted into thematic folders: Epics and Features, named
+after
+[the Atlassian Scrum terminology](https://www.atlassian.com/agile/project-management/epics-stories-themes).
 
-We have many of them:
+> **Warning**: do not be confused between Agile Epics and redux-observables Epics. We'll use the term "Epic" with the Agile meaning in this section.
 
-- EventSystemEpic: which handles the file events
-- ExecutionControlEpic: which handles tools execution
-- ProjectSystemEpic: which handles management of projects
-- GlobalSystem: which links them all together
+### Epics
 
+An Epic is a set of features. We can think of Epics as representing different
+functions of an IDE (text edition, tools execution, project management, etc).
 
+There are four epics:
 
-Each Epic offers then features.
+- **EventSystemEpic**: handles the file events.
+- **ExecutionControlEpic**: handles tools execution.
+- **ProjectSystemEpic**: handles management of projects.
+- **GlobalSystem**: handles the glue code and composition roots, liking the others together.
 
 ### Features
 
-A feature is a part of an Epic, it's the first unit that would come to your mind if you had to describe what adds Molecule to Atom. "It adds a console, a terminal, etc...".
+Features are the basic units of functionality in the code. Features are the
+different things you'd describe to explain what Molecule adds to Atom. "It adds
+a console, a terminal, code diagnostics, etc".
 
-Features follow all the same folder structure, which is directly related to Flux and specifically Redux.
+Features all follow the same folder structure, based on the Redux workflow.
 
 They can contain:
 
-- Actions: which contains redux action creators
-- Reducers: which contains redux reducers
-- Selectors: which contains some utils to select data from the related state
-- Containers: which contains react components which take data from the state and send them as props
-- Presenters: which contains visual components
-- Types: which contains consts, flow types and immutable Records
-- Fake: which contains fake data for unit testing
-- Styles: which contains some variables related to the UI
-- Layouts: which contains some old visual components
-- AtomLinks: which contains the functions that mount react components (ReactDOM.render) on Atom elements.
-- Model: which contains core functions for data management
-- Process: which contains files being launched as child processes
+- `Actions/`: which contains redux action creators
+- `Reducers/`: which contains redux reducers
+- `Selectors/`: which contains some utils to select data from the related state
+- `Containers/`: which contains react components which take data from the state and send them as props
+- `Presenters/`: which contains visual components
+- `Epics/`: which contains redux-observable epics handling I/O events
+- `Types/`: which contains consts, flow types and immutable Records
+- `Fake/`: which contains fake data for unit testing
+- `Styles/`: which contains some variables related to the UI
+- `Layouts/`: which contains some old visual components
+- `AtomLinks/`: which contains the functions that mount react components (ReactDOM.render) on Atom elements.
+- `Model/`: which contains core functions for data management
+- `Process/`: which contains files being launched as child processes
 
-## Code & Debug
 
-Let's say you want to add a new feature and that this feature contains a User Interface.
+## Atom's package system
 
-### Storybook
+Molecule is an Atom package. When Atom starts, it runs the methods declared in
+Molecule's package object, exported in the `lib/molecule-dev-environment.js`
+file.
 
-The first thing you'll want to add is your UI. To quickly iterate on the code, we have an integration of storybook in Molecule.
+That object has two important fields: **config**, which lists custom settings
+that the user can edit, and **activate**, which runs Molecule (loads plugins,
+loads package files, creates React roots, etc).
 
-Add a storybook story, and iterate on your components (which will be located in YourFeature/Presenters/). You can find a documentation on [how to write stories](https://storybook.js.org/basics/writing-stories/)
+## React and Redux
 
-### Unit tests
+The project uses the [Redux](https://redux.js.org/) architecture for
+representing state, which is inspired by Facebook's
+[Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content), and
+the [React](https://reactjs.org/) library for rendering. They help guarantee
+that the rendering code is always straightforward and bug-free.
 
-Once you're confident with the UI, you can start adding the model code. Start with a unit test. We use[ Jest](https://jestjs.io/docs/en/getting-started) in Molecule to handle unit testing.
+If you're not familiar with React, Flux or Redux, the gist of it is, we store
+the entire state of our application (plugins loaded, tasks being executed, etc)
+in a **State** object handled by a specific construct (call the Redux Store).
+This State is passed as the parameter **Views**; functions that
+take the State (but don't modify it) and return the DOM objects that Molecule
+must display, using React's syntax and API.
 
-The first thing you can build is the reducer, which will handle data states. Start by adding unit tests for your new reducer and then code it to pass the tests.
+The State can never be modified directly; instead a new state is generated by
+the Store when it receives **Actions**. Actions are dispatched by Views when the
+user interacts with Molecule, and by **Redux Middleware** after I/O events (eg a
+task is done running). These actions are passed as parameters to **Reducers**,
+which take the Action and the previous State as parameters, and return the
+new state.
 
-Iterate like this on each parts of your model.
+To summarize:
 
-You can also snapshot test your UI components.
+* **State**: the entire current state of Molecule.
+* **Views**: functions returning what Molecule must display.
+* **Actions**: messages sent to change the State.
+* **Reducers**: functions returning the new state after an action is dispatched.
+* **Redux Middleware**: constructs handling I/O events.
 
-### Integration
+These concepts match different parts of Molecule's folder structure.
 
-The model and UI ready, you can start integrating them into Atom, by creating a Container component, and mounting the UI with an AtomLink. 
+### State
 
-Launch atom with "atom -d" (development / debug mode) and iterate by coding and reloading Atom after each modification.
+When the Redux Store is created, the State is defined as the default value
+returned by Reducers. Its definition is spread between `SomeFeature/Reducers/`
+folders and `OtherFeature/Types/` folders.
 
-### Track down bugs
+Its composition root is `lib/GlobalSystem/Reducers.js`.
 
-Bugs can be hard to track down. We provide you several tools to be able to develop with confidence features on Molecule.
+### Views
 
-The first one is the [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) . Molecule is already configured for interacting with the devtools.
+Views are defined in `SomeKindOfFeature/Presenters/` folders. They're called
+are called from **Containers**, which convert State for Redux data into
+React-compatible arguments; they're defined in `GreatFeature/Containers/`
+folders.
 
-The second one is our own console. Interactions with language servers, errors coming from tools execution, are all logged in the Molecule console.
+They are rendered into DOM objects in:
+- `lib/ExecutionControlEpic/ControlPanelFeature/AtomLinks/Panels.js`
+- `lib/ExecutionControlEpic/DevToolsSummaryFeature/AtomLinks/Panels.js`
+- `lib/ExecutionControlEpic/QuestionSystemFeature/AtomLinks/Layouts.js`
 
-The third one is the integrated chrome console of Atom.io.
+### Reducers
+
+Reducers are defined in `SomeFeature/Reducers/` folders.
+
+Their composition root is `lib/GlobalSystem/Reducers.js`.
+
+### Actions
+
+Actions are defined in `SomeFeature/Actions/` folders.
+
+They're dispatched by the `dispatch` callback in Containers, and by Redux
+Middleware in `OtherFeature/Epics/` folders.
+
+### Redux-Observable Epics
+
+[Redux-Observable documentation](https://redux-observable.js.org/l) is a
+Middleware used by Molecule. It relies on **Epics** (not to be confused with
+Agile Epics), which are functions taking a
+[RxJs Observable](http://reactivex.io/documentation/observable.html) of
+actions, and returning an Observable of new actions.
+
+Redux Epics handle I/O events when an actions is dispatched. For instance, when
+the user presses the "Run task" button, a **RUN_TASK** action is dispatched; the [Tasks.js](https://github.com/alanzanattadev/atom-molecule-dev-environment/tree/master/lib/ProjectSystemEpic/LanguageServerProtocolFeature/Epics/Tasks.js)) epic is
+called, and actually runs the Task; it returns the different actions
+emitted by that task.
+
+Redux Epics are defined in `SomeFeature/Epics/` folders. Their composition root
+is `lib/GlobalSystem/Epics.js`.
+
+
+## Non-Redux states
+
+Redux handles all the state which is serializable and linked to the UI. For all
+the non-serializable states (as terminal instances or network connections),
+separate stores are created. Those stores are simple map or lists encapsulated
+in a class. This class is generally named "SomethingController".
+
+### Execution
+
+Each running process is linked to a structure called Execution with its task identifier. The role of the execution is to handle process specific state (eg: instance of terminal) and process specific events (eg: terminal resizes). Executions are then stored in a class called ExecutionController.
+
+When an event (eg: a new terminal output) notifies the Core through LSP messages, Molecule's Core can get the corresponding execution with the task ID, and send the new output to the terminal instance this way.

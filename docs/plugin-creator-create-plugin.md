@@ -63,7 +63,7 @@ files (helpers, presenters, etc) must be in this directory or a sub-directory.
 `lib/molecule-dev-environment.js`
 
 When in doubt, you can consult [one of the existing plugins](https://github.com/alanzanattadev/atom-molecule-dev-environment/tree/master/lib/ExecutionControlEpic/Plugins)
-as an example.
+as a reference.
 
 
 ## Plugin Structure
