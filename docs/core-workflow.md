@@ -2,8 +2,6 @@
 title: Workflow
 ---
 
-# Workflow
-
 ## Folders structure
 
 Molecule is made of different parts that are organized under two hierarchical elements: Epics and Features. This terminology comes from Scrum, an agile method. Terminologies can differ depending on scrum implementations, but you can check it on [Atlassian documentation](https://www.atlassian.com/agile/project-management/epics-stories-themes).
@@ -68,7 +66,7 @@ You can also snapshot test your UI components.
 
 ### Integration
 
-The model and UI ready, you can start integrating them into Atom, by creating a Container component, and mounting the UI with an AtomLink. 
+The model and UI ready, you can start integrating them into Atom, by creating a Container component, and mounting the UI with an AtomLink.
 
 Launch atom with "atom -d" (development / debug mode) and iterate by coding and reloading Atom after each modification.
 

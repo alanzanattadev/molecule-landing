@@ -2,9 +2,6 @@
 title: Bundled plugins
 ---
 
-Bundled plugins
-===============
-
 Molecule is shipped with plugins for the following tools:
 
 - C++ (clang and CMake)

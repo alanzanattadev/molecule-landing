@@ -1,9 +1,6 @@
 ---
-title: Creating a plan
+title: How to create a plan
 ---
-
-How to create a plan
-====================
 
 To create a new plan for a plugin, click the "New plan" button, under this
 plugin. The plan configuration interface should open in the Control Panel.
