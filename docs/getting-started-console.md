@@ -1,13 +1,16 @@
 ---
-title: The Console
+title: Console
 ---
+
+The Console
+===========
 
 To keep track of what is happening in your project, Molecule provides
 a console giving you a quick overview of all events happening in Molecule.
 
 ![Overview of the Console](assets/console-overview.png)
 
-To access the Console, scroll down to the bottom of the
+To access the Console, scroll down to the bottom of the 
 [Plan sub-panel](getting-started-using-a-plan.md#plugin-sub-panel)
 to find the **Console** section. To see the logs, simply click the **log** button.
 
