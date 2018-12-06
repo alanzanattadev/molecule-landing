@@ -16,7 +16,7 @@ on it.
 The first step to contribute to Molecule is to download the code from Github.
 Run the following commands on your terminal:
 
-```
+``` sh
 git clone https://github.com/alanzanattadev/atom-molecule-dev-environment.git
 cd atom-molecule-dev-environment
 ```
@@ -25,7 +25,7 @@ Then, install Molecule in
 [development mode](https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#running-in-development-mode),
 using the `apm` command line, and run Atom in dev mode.
 
-```
+``` sh
 npm install
 apm link -d
 atom --dev
@@ -65,9 +65,10 @@ When you want to run your code to see your changes, start atom in dev mode. Note
 that atom uses the code in the `build/` folder, which is produced by
 [Babel](https://babeljs.io/).
 
-```
-atom --dev
+``` sh
 yarn babel:watch
+# Another terminal
+atom --dev
 ```
 
 You might want to inspect your code using Chrome Devtools. Atom provides the
@@ -99,4 +100,4 @@ Run `npm test` to check that your changes don't introduce new errors.
 
 Molecule integrates changes to its codebase through
 [Github Pull Requests](https://help.github.com/articles/about-pull-requests/). Once your feature or path is complete, submit a PR
-and will we get pack to you as soon as we can.
+and will we get back to you as soon as we can.

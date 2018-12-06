@@ -8,11 +8,13 @@ title: Project structure
 
 ![Molecule's folder structure](assets/molecule-folders.png)
 
-The most important folders in Molecule are:
+The folders are:
 
 * `build/`: The target folder for Babel transcompilation.
+* `flow-*/`: Additional information needed for Flow type-checking. You probably won't need to worry about it.
 * `images/`: Stores the README images and the plugin icons.
-* `lib/`: Stores the actual source code.
+* `keymaps/`: Keybindings for Molecule commands.
+* `lib/`: The actual source code.
 
 Molecule's code is sorted into thematic folders: Epics and Features, named
 after
@@ -22,7 +24,7 @@ after
 
 ### Epics
 
-An Epic is a set of features. We can think of Epics as representing different
+An Epic is a set of Features. We can think of Epics as representing different
 functions of an IDE (text edition, tools execution, project management, etc).
 
 There are four epics:
@@ -30,7 +32,7 @@ There are four epics:
 - **EventSystemEpic**: handles the file events.
 - **ExecutionControlEpic**: handles tools execution.
 - **ProjectSystemEpic**: handles management of projects.
-- **GlobalSystem**: handles the glue code and composition roots, liking the others together.
+- **GlobalSystem**: handles the glue code and composition roots, linking the others together.
 
 ### Features
 
@@ -78,7 +80,7 @@ that the rendering code is always straightforward and bug-free.
 If you're not familiar with React, Flux or Redux, the gist of it is, we store
 the entire state of our application (plugins loaded, tasks being executed, etc)
 in a **State** object handled by a specific construct (call the Redux Store).
-This State is passed as the parameter **Views**; functions that
+This State is passed as a parameter to **Views**; functions that
 take the State (but don't modify it) and return the DOM objects that Molecule
 must display, using React's syntax and API.
 
@@ -141,8 +143,9 @@ Agile Epics), which are functions taking a
 actions, and returning an Observable of new actions.
 
 Redux Epics handle I/O events when an actions is dispatched. For instance, when
-the user presses the "Run task" button, a **RUN_TASK** action is dispatched; the [Tasks.js](https://github.com/alanzanattadev/atom-molecule-dev-environment/tree/master/lib/ProjectSystemEpic/LanguageServerProtocolFeature/Epics/Tasks.js)) epic is
-called, and actually runs the Task; it returns the different actions
+the user presses the "Run task" button, a **RUN_TASK** action is dispatched; the
+[Tasks.js](https://github.com/alanzanattadev/atom-molecule-dev-environment/tree/master/lib/ProjectSystemEpic/LanguageServerProtocolFeature/Epics/Tasks.js)
+epic is called, and actually runs the Task; it returns the different actions
 emitted by that task.
 
 Redux Epics are defined in `SomeFeature/Epics/` folders. Their composition root
@@ -153,7 +156,7 @@ is `lib/GlobalSystem/Epics.js`.
 
 Redux handles all the state which is serializable and linked to the UI. For all
 the non-serializable states (as terminal instances or network connections),
-separate stores are created. Those stores are simple map or lists encapsulated
+separate stores are created. Those stores are simple maps or lists encapsulated
 in a class. This class is generally named "SomethingController".
 
 ### Execution
