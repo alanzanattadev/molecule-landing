@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Centralize your tooling and focus on what matters",
     "docs": {
+      "core-introduction": {
+        "title": "Introduction"
+      },
       "core-execution": {
         "title": "Tool execution"
       },
@@ -12,7 +15,7 @@
         "title": "LSP Extension"
       },
       "core-workflow": {
-        "title": "Workflow"
+        "title": "Project structure"
       },
       "getting-started-bundled-plugins": {
         "title": "Bundled plugins"
