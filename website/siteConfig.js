@@ -26,6 +26,7 @@ const siteConfig = {
     {blog: true, label: "Blog"},
     {label: "Github", href: "https://github.com/alanzanattadev/atom-molecule-dev-environment"},
   ],
+  contactAddress: "mailto:molecule_2019@labeip.epitech.eu",
   users,
   /* path to images for header/footer */
   headerIcon: 'img/molecule.png',

@@ -9,15 +9,6 @@
 
 @media only screen and (min-width: 1500px) {}
 
-.darkBackground {
-  background-color: #20232a;
-  color: #cecece;
-}
-
-.darkBackground img {
-  filter: brightness(0) invert(1);
-}
-
 .blockImage img {
   padding-top: 50px;
 }
@@ -29,4 +20,15 @@
 .whiteBackground {
   color: #592b71;
   background-color: white;
+}
+
+.alternate-blocks .blockElement:nth-child(4n-2),
+.alternate-blocks .blockElement:nth-child(4n-1) {
+  background-color: #20232a;
+  color: #cecece;
+}
+
+.alternate-blocks .blockElement:nth-child(4n-2) img,
+.alternate-blocks .blockElement:nth-child(4n-1) img {
+  filter: brightness(0) invert(1);
 }

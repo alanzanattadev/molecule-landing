@@ -35,7 +35,7 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5><a href="https://twitter.com/moleculeide" target="_blank">Follow us on Twitter !</a></h5>
-            <h5><a href="mailto:molecule_2019@labeip.epitech.eu">Contact us</a></h5>
+            <h5><a href={this.props.config.contactAddress}>Contact us</a></h5>
           </div>
           <div>
             <a

@@ -92,7 +92,7 @@ class HomeSplash extends React.Component {
   }
 }
 
-const Block = props => (
+const Blocks = props => (
   <Container
     padding={['bottom']}
     id={props.id}
@@ -108,65 +108,44 @@ class Index extends React.Component {
     return (
       <div>
         <HomeSplash language={language} />
-        <Container className="whiteBackground">
-          <Block>
+        <Container className="whiteBackground alternate-blocks">
+          <Blocks>
             {[
               {
                 title: 'Centralized Toolbox',
-                content: 'As developers, we all want an efficient workflow. We\'ve all been in a situation where every time we get to work, we have to start a large number of tools in X terminals spread over Y work-spaces. This is where Molecule takes root: we create a single, unified toolbox from which you will be able to access all your tools with ease.',
+                content: 'As developers, we all want an efficient workflow. We\'ve all been in a situation where every' +
+                    'time we get to work, we have to start a large number of tools in X terminals spread over Y work-spaces.' +
+                    'This is where Molecule takes root: we create a single, unified toolbox from which you will be able to access' +
+                    'all your tools with ease.',
                 image: imgUrl('icons8-toolbox-filled-100.png'),
                 imageAlign: 'top',
               },
-            ]}
-          </Block>
-        </Container>
-        <Container className="darkBackground">
-          <Block>
-            {[
               {
                 title: 'Unified Execution',
-                content: 'Executing your tools has never been simpler. You will be able to configure as many ways to execute your tool as you like & save them as \'Plans\'. A \'plan\' is a simple button which will execute your tool with the corresponding configuration.',
+                content: 'Executing your tools has never been simpler. You will be able to configure as many ways to' +
+                    'execute your tool as you like & save them as \'Plans\'. A \'plan\' is a simple button which will' +
+                    'execute your tool with the corresponding configuration.',
                 image: imgUrl('icons8-settings-filled-100.png'),
                 imageAlign: 'top',
               },
-            ]}
-          </Block>
-        </Container>
-        <Container className="whiteBackground">
-          <Block>
-            {[
               {
                 title: 'Clear Information Flow',
-                content: 'Molecule aspires have an information readability nothing short of revolutionary: we wish to offer you a clear and simple way of navigating through your tools\' logs. Information is displayed through entities we call Diagnostics. A diagnostic can be a signle error for a tool and a group of five warnings for another, but it\'s always easy to read, to help you understand your tools and fix the problems that pop up.',
+                content: 'Molecule aspires have an information readability nothing short of revolutionary: we wish to' +
+                    'offer you a clear and simple way of navigating through your tools\' logs. Information is displayed through entities we call Diagnostics. A diagnostic can be a signle error for a tool and a group of five warnings for another, but it\'s always easy to read, to help you understand your tools and fix the problems that pop up.',
                 image: imgUrl('icons8-list-filled-100.png'),
                 imageAlign: 'top',
               },
-            ]}
-          </Block>
-        </Container>
-        <Container className="darkBackground">
-          <Block>
-            {[
               {
                 title: 'A first tool set for web developers',
-                content: 'We currently provide you a tool set for web development, but Molecule will target way more stacks! We\'ll support mobile, devops and back-end development in the future too! We\'re also making the plugin system flexible to let you integrate your own tools, whether they\'re proprietary or not, and the API is always evolving to allow you to create more complete plugins.',
+                content: 'We currently provide you a tool set for web development, but Molecule will target way more ' +
+                    'stacks! We\'ll support mobile, devops and back-end development in the future too! We\'re also ' +
+                    'making the plugin system flexible to let you integrate your own tools, whether they\'re proprietary ' +
+                    'or not, and the API is always evolving to allow you to create more complete plugins.',
                 image: imgUrl('icons8-support-filled-100.png'),
                 imageAlign: 'top',
               },
             ]}
-          </Block>
-        </Container>
-        <Container className="whiteBackground">
-          <Block>
-            {[
-              {
-                title: 'OpenSource',
-                content: 'We are an OpenSource project under the MIT License, so you can copy and modify the code. And of course you can contribute to this beautiful project, joins us on github, fork the project and send us Pull Request.',
-                image: imgUrl('osi_standard_logo.png'),
-                imageAlign: 'top',
-              },
-            ]}
-          </Block>
+          </Blocks>
         </Container>
       </div>
     );
