@@ -9,6 +9,10 @@
 
 @media only screen and (min-width: 1500px) {}
 
+.gridBlock > * {
+  margin: 0;
+}
+
 .blockImage img {
   padding-top: 50px;
 }
