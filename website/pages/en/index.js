@@ -43,7 +43,7 @@ Button.defaultProps = {
 };
 
 const SplashContainer = props => (
-  <div className="homeContainer">
+  <div className="homeContainer" style={{marginBottom: '10rem'}}>
     <div className="homeSplashFade">
       <div className="wrapper homeWrapper">{props.children}</div>
     </div>
@@ -94,7 +94,6 @@ class HomeSplash extends React.Component {
 
 const Blocks = props => (
   <Container
-    padding={['bottom']}
     id={props.id}
     background={props.background}>
     <GridBlock align="center" contents={props.children} layout={props.layout} />
@@ -131,7 +130,10 @@ class Index extends React.Component {
               {
                 title: 'Clear Information Flow',
                 content: 'Molecule aspires have an information readability nothing short of revolutionary: we wish to' +
-                    'offer you a clear and simple way of navigating through your tools\' logs. Information is displayed through entities we call Diagnostics. A diagnostic can be a signle error for a tool and a group of five warnings for another, but it\'s always easy to read, to help you understand your tools and fix the problems that pop up.',
+                    'offer you a clear and simple way of navigating through your tools\' logs. Information is displayed ' +
+                    'through entities we call Diagnostics. A diagnostic can be a signle error for a tool and a group of ' +
+                    'five warnings for another, but it\'s always easy to read, to help you understand your tools and fix ' +
+                    'the problems that pop up.',
                 image: imgUrl('icons8-list-filled-100.png'),
                 imageAlign: 'top',
               },
